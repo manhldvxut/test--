@@ -1,0 +1,643 @@
+// absolute
+%absolute {
+	position: absolute;
+	content: "";
+}
+
+// absolute-center
+%absolute-center {
+	@extend %absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.sp-only {
+	display: none;
+
+	@include media-sp {
+		display: block;
+	}
+}
+
+.pc-only {
+	display: block;
+
+	@include media-sp {
+		display: none;
+	}
+}
+
+.text-right {
+	text-align: right;
+}
+
+.c-row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.c-col-3 {
+	width: 25%;
+	max-width: 25%;
+	box-sizing: border-box;
+
+	@include media-sp {
+		width: 100%;
+		max-width: 100%;
+	}
+
+}
+
+.c-col-4 {
+	width: 33.333%;
+	max-width: 33.333%;
+	box-sizing: border-box;
+
+	@include media-sp {
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
+.c-col-6 {
+	width: 50%;
+	max-width: 50%;
+	box-sizing: border-box;
+
+	@include media-sp {
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
+.p-20 {
+	padding-left: 20px;
+	padding-right: 20px;
+	@include media-sp{
+		padding-left: vw(20px);
+		padding-right: vw(20px);
+	}
+}
+
+.c-20 {
+	margin-left: -20px;
+	margin-right: -20px;
+	@include media-sp{
+		margin-left: vw(-20px);
+		margin-right: vw(-20px);
+	}
+}
+
+.p-25 {
+	padding-left: 25px;
+	padding-right: 25px;
+	@include media-sp{
+		padding-left: vw(25px);
+		padding-right: vw(25px);
+	}
+}
+
+.c-25 {
+	margin-left: -25px;
+	margin-right: -25px;
+	@include media-sp{
+		margin-left: vw(-25px);
+		margin-right: vw(-25px);
+	}
+}
+
+h2 {
+	@include fontSize(50px);
+	font-weight: bold;
+}
+
+.en {
+	@include fontSize(90px);
+	letter-spacing: 0.07rem;
+	@include media-sp{
+		font-size: vw(74px);
+	}
+}
+
+.font-en {
+	font-family: $font-en;
+}
+
+a {
+	transition: 0.2s all;
+
+	&:hover {
+		@include media-pc {
+			opacity: 0.8;
+		}
+	}
+}
+
+.icon-legs {
+	position: relative;
+	display: inline-block;
+
+	&::before,
+	&::after {
+		@extend %absolute;
+		width: 37px;
+		height: 41px;
+		background: url('../img/icon-legs.png') no-repeat;
+		background-size: 100% 100%;
+		right: -90px;
+		top: 14px;
+	}
+
+	&::after {
+		right: -60px;
+		top: 64px;
+		transform: rotate(-10deg);
+	}
+}
+
+.plus-icon{
+	position: absolute;
+	width: vw(60px);
+	height: vw(60px);
+	right: vw(20px);
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	&::before, &::after{
+		@extend %absolute-center;
+		width: vw(30px);
+		height: vw(3px);
+		background-color: $gray-color04;
+	}
+	&::after{
+		width: vw(3px);
+		height: vw(30px);
+	}
+}
+
+[data-display=sp] {
+	display: none;
+
+	@include media-sp {
+		display: block;
+	}
+}
+
+
+[data-type=yellow] {
+	background: #ffb83c;
+}
+
+[data-type=greens] {
+	background: #61bcc2;
+}
+
+
+
+.container {
+	max-width: 1230px;
+	margin: auto;
+	padding: 0 15px;
+	position: relative;
+
+	@include media-sp {
+		padding: 0 vw(15px);
+	}
+}
+
+.list-right--icon {
+	position: relative;
+
+	&::before {
+		@extend %absolute;
+		border-bottom-style: solid;
+		border-bottom-width: 2px;
+		border-right-style: solid;
+		border-right-width: 2px;
+		border-color: $list-nav-color;
+		height: 7px;
+		width: 7px;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		transform: rotate(-45deg);
+		right: -12px;
+
+		@include media-sp {
+			width: vw(17px);
+			height: vw(17px);
+			border-right-width: vw(5px);
+			border-bottom-width: vw(5px);
+		}
+	}
+}
+
+.list-sns {
+	img {
+		width: 36px;
+		height: 36px;
+		border-radius: 50%;
+
+		@include media-sp {
+			width: vw(70px);
+			height: vw(70px);
+		}
+	}
+}
+
+.logo {
+	>img {
+		max-width: 205px;
+		margin: auto;
+		display: block;
+
+		@include media-sp {
+			max-width: vw(341px);
+		}
+	}
+}
+
+.singin {
+	position: relative;
+
+	&::before {
+		@extend %absolute;
+		width: 14px;
+		height: 20px;
+		background: url('/img/icon-singin.png') no-repeat;
+		background-size: 100%;
+		left: -25px;
+		bottom: 0;
+		top: 0;
+		margin: auto;
+
+		@include media-sp {
+			width: vw(22px);
+			height: vw(31px);
+			left: vw(-33px);
+		}
+	}
+}
+
+.login {
+	position: relative;
+
+	&::before {
+		@extend %absolute;
+		width: 16px;
+		height: 20px;
+		background: url('/img/icon-login.png') no-repeat;
+		background-size: 100%;
+		left: -25px;
+		bottom: 0;
+		top: 0;
+		margin: auto;
+
+		@include media-sp {
+			width: vw(24px);
+			height: vw(32px);
+			left: vw(-33px);
+		}
+	}
+}
+
+.icon-arrow-down {
+	position: relative;
+
+	&::before {
+		@extend %absolute;
+		border-top: 9px solid $arrow-down-line;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		height: 0;
+		width: 0;
+		right: -26px;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+
+
+	}
+}
+
+
+
+// slick arrow
+
+.arrow-cic {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	display: block;
+	background: #fff;
+	border: 1px solid $btn-arrow;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	z-index: 22;
+	cursor: pointer;
+
+	@include media-sp {
+		width: vw(70px);
+		height: vw(70px);
+	}
+
+	&.arrow {
+		&-left {
+			left: 17px;
+
+			&.list-right--icon {
+				&::before {
+					transform: scale(-1, -1);
+					transform: rotate(135deg);
+				}
+			}
+		}
+
+		&-right {
+			right: 17px;
+		}
+	}
+
+	&.list-right--icon {
+		&:before {
+			right: 0;
+			left: 0;
+			margin: auto;
+			border-color: $btn-arrow;
+		}
+	}
+}
+
+.big-logo {
+	img {
+		max-width: 228px;
+	}
+}
+
+
+// dot slick
+
+.c-dot-slider {
+	padding-left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	li {
+		font-size: 0;
+		padding: 0 12px;
+		opacity: 0.5;
+		transition: 0.2s all;
+
+
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:last-child {
+			padding-right: 0;
+		}
+
+		&:nth-child(even) {
+			margin-top: -25px;
+		}
+
+		&.slick-active {
+			opacity: 1;
+		}
+	}
+
+	button {
+		border: 0;
+		width: 17px;
+		height: 16px;
+		background: url('../img/icon-hashi.png') no-repeat;
+		background-size: 100% 100%;
+		cursor: pointer;
+
+		@include media-sp {
+			width: vw(24px);
+			height: vw(22px);
+		}
+	}
+
+}
+
+// nav slider
+
+.c-nav-slider {
+	max-width: 280px;
+	margin: auto;
+
+	@include media-sp {
+		max-width: 100%;
+	}
+
+
+	&__item {
+		padding: 0 10px;
+		opacity: 0.5;
+		transition: 0.2s all;
+
+		@include media-sp {
+			padding: 0 vw(15px);
+		}
+
+		&:last-child {
+			@include media-sp {
+				padding-right: 0;
+			}
+		}
+
+		&:first-child {
+			@include media-sp {
+				padding-left: 0;
+			}
+		}
+
+		&.slick-current {
+			opacity: 1;
+		}
+
+		img {
+			max-width: 117px;
+
+			@include media-sp {
+				max-width: 100%;
+				width: vw(330px);
+			}
+		}
+	}
+
+}
+
+
+.time {
+	color: $secondary-color;
+	@include fontSize(14px);
+	font-weight: 500;
+	display: block;
+
+	@include media-sp {
+		font-size: vw(24px);
+	}
+}
+
+.tag {
+	@include fontSize(14px);
+	font-weight: 500;
+	padding: 4px 15px;
+	border-radius: 13px;
+	display: block;
+	color: #fff;
+	line-height: 1;
+
+	@include media-sp {
+		font-size: vw(24px);
+	}
+}
+
+
+// badge-line
+.badge-line {
+	position: relative;
+	text-decoration: none;
+	padding: 6px 12px 6px 15px;
+	border: 1px solid #000;
+	border-right: 0;
+	max-height: 35px;
+	background: #fff;
+	@include fontSize(14px);
+	line-height: 1;
+	display: inline-block;
+
+	&:before {
+		@extend %absolute;
+
+	}
+
+	&:after {
+		@extend %absolute;
+		border-style: solid;
+		border-width: 0 0 11px 11px;
+		height: 0;
+		width: 0;
+		border-color: transparent;
+		border-bottom-color: #000;
+		left: -1px;
+		bottom: -11px;
+		transform: rotate(-90deg);
+		left: -1px;
+	}
+}
+
+
+.line-bg {
+	position: absolute;
+	background: url('../img/icon.png') no-repeat;
+	width: 14px;
+	height: 26px;
+	background-size: 100% 100%;
+	right: -13px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	display: block;
+
+	&::before,
+	&::after {
+		@extend %absolute;
+		width: 100%;
+		height: 1px;
+		background-color: #000;
+		top: -1px;
+		left: 0;
+	}
+
+	&::after {
+		top: auto;
+		bottom: -1px;
+	}
+}
+
+
+.dogandcat-avatar {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	&-list {
+		display: flex;
+
+		.left {
+			img {
+				max-width: 125px;
+			}
+		}
+
+		.right {
+			img {
+				max-width: 100px;
+			}
+		}
+	}
+
+	img {
+		max-width: 293px;
+	}
+
+}
+
+
+.c-list-legs {
+	ul {
+		li {
+			list-style: none;
+
+			&:nth-child(1) {
+				margin-bottom: 20px;
+			}
+
+			&:nth-child(2) {
+				margin-left: 40px;
+				margin-bottom: 20px;
+			}
+
+			&:nth-child(3) {
+				margin-left: 120px;
+				margin-top: -30px;
+				margin-bottom: 40px;
+			}
+
+			&:nth-child(4) {
+				margin-left: 138px;
+				margin-bottom: -10px;
+			}
+
+			&:nth-child(5) {
+				margin-left: 220px;
+			}
+		}
+	}
+
+	img {
+		max-width: 32px;
+	}
+}
+
+
+.c-legs__group {
+	position: absolute;
+	bottom: -135px;
+	left: 80px;
+
+	img {
+		max-width: 910px;
+		margin: auto;
+	}
+}

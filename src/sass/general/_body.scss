@@ -1,0 +1,13 @@
+// # body
+// ========== ========== ========== ========== ==========
+body {
+	color: $font-primary-color;
+	font-family: $font-family-primary, sans-serif;
+	font-size: $base-font-size;
+	line-height: $base-line-height;
+	letter-spacing: $base-letter-spacing;
+	margin: 0;
+	padding: 0;
+
+	// font-feature-settings: 'palt';
+}

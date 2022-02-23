@@ -1,0 +1,1242 @@
+// stylelint-disable selector-class-pattern, selector-nested-pattern
+// # 詳細ページ
+// ========== ========== ========== ========== ========== ========== ========== ========== ========== ========== ==========
+// メインコンテンツ（content-mainコンポーネント）の内容はCMSなどで管理されるHTMLを含んだり、
+// ページ独自のスタイルを扱うことが多いので例外的に専用のルールを設ける。
+// メインコンテンツのエレメントは基本的に自由である。
+// ただし、クラス名は`c-`で開始してはいけない。もちろん 【`c-` + `コンポーネント名` + `__` + `エレメント名`】 という規則でクラス名をつけない。
+// さらにそのルールに従って、メインコンテンツの中にコンポーネントを内包してはいけない。
+// ========== ========== ========== ========== ========== ========== ========== ========== ========== ========== ==========
+.c-content-main {
+	// 全ブロック基本の余白
+	$wp-default-margin-bottom: 3em;
+
+	// 背景色・枠線がある場合のパディング
+	$wp-opt-padding: 0.8em;
+
+	// ****************************************
+	// 基本スタイル
+	// ****************************************
+	font-size: 1.6rem;
+	line-height: 2;
+
+	@media (--sm-lte) {
+		font-size: calc(16 / 320 * 100vw); // 幅320pxのデバイスで16pt
+	}
+
+	// ****************************************
+	// エレメント
+	// ☝ 以降のフォントサイズの指定単位は em を推奨
+	// ****************************************
+	a {
+		color: currentColor;
+	}
+
+	h2 {
+		font-size: calc(24 / 16 * 1em);
+		line-height: 2;
+		margin: 1em 0 25px;
+		padding: 5px 25px;
+		background: url('../img/bg-repeat-01.gif');
+		color: $font-primary-color;
+		border-bottom: 4px solid $primary-color;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	// wpで使う場合
+	// .bge-title-h2 {
+	// 	margin-top: 0;
+	// }
+
+	h3 {
+		font-size: calc(22 / 16 * 1em);
+		line-height: 2;
+		margin: 1em 0 20px;
+		padding-left: 20px;
+		border-left: 5px solid $primary-color;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	// wpで使う場合
+	// .bge-title-h3 {
+	// 	margin-top: 0;
+	// }
+
+	h4 {
+		font-size: calc(19 / 16 * 1em);
+		line-height: 2;
+		margin: 1em 0 20px;
+		background: $secondary-color-lighter5;
+		padding: 5px 25px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	h5 {
+		font-size: calc(18 / 16 * 1em);
+		color: $accent-color;
+		line-height: 2;
+		margin: 1em 0;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	h6 {
+		font-size: calc(18 / 16 * 1em);
+		line-height: 2;
+		margin: 1em 0;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	ul {
+		padding-left: 20px;
+
+		> li {
+			list-style: none;
+
+			&::before {
+				content: '';
+				display: inline-block;
+				vertical-align: middle;
+				margin: 0 15px 0 -20px;
+				width: 8px;
+				height: 8px;
+				border: 1px solid transparent;
+				border-radius: 50%;
+				background: $primary-color;
+			}
+
+			> ul li::before {
+				background: $primary-color-lighter;
+
+				> ul li::before {
+					background: $secondary-color-lighter2;
+				}
+			}
+		}
+
+		ul,
+		ol {
+			// Lv.2以降
+			margin-left: $indent-sub-list;
+		}
+	}
+
+	ol {
+		counter-reset: content-main-ol-default;
+		padding-left: 0;
+
+		> li {
+			list-style: none;
+
+			&::before {
+				content: counter(content-main-ol-default, decimal) '. ';
+				counter-increment: content-main-ol-default;
+				color: $primary-color-darker;
+				font-weight: bold;
+			}
+		}
+
+		ul,
+		ol {
+			// Lv.2以降
+			margin-left: $indent-sub-list;
+		}
+	}
+
+	table {
+		border-collapse: collapse;
+		width: 100%;
+		margin-bottom: 30px;
+
+		@media (--xs) {
+			display: block;
+		}
+	}
+
+	caption {
+		font-weight: bold;
+		text-align: left;
+
+		@media (--xs) {
+			display: block;
+		}
+	}
+
+	thead {
+		@media (--xs) {
+			display: none;
+		}
+	}
+
+	tfoot {
+		@media (--xs) {
+			display: none;
+		}
+	}
+
+	tbody {
+		@media (--xs) {
+			display: block;
+		}
+	}
+
+	tr {
+		@media (--xs) {
+			display: block;
+		}
+	}
+
+	th,
+	td {
+		padding: 1.3em 1.7em;
+		color: $font-primary-color;
+		border-top: 1px solid $border-primary-color;
+		border-bottom: 1px solid $border-primary-color;
+
+		@media (--xs) {
+			display: block;
+			margin-top: -1px;
+			width: 100% !important; // stylelint-disable-line declaration-no-important
+		}
+	}
+
+	th {
+		background: $gray-color02;
+		text-align: left;
+
+		@media (--xs) {
+			padding: 10px 4% 10px 6%;
+		}
+	}
+
+	td {
+		@media (--xs) {
+			padding: 10px 4% 20px 6%;
+		}
+	}
+
+	p {
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	blockquote {
+		background: $gray-color;
+		margin: 0 0 0 $indent-sub-list;
+		padding: 1em 2em;
+		position: relative;
+
+		&::before {
+			content: '“';
+			display: block;
+			font-size: calc(40 / 16 * 1em);
+			left: 0;
+			line-height: 0;
+			margin-top: 0.5em;
+			opacity: 0.2;
+			pointer-events: none;
+			position: absolute;
+			top: 0;
+			user-select: none;
+		}
+
+		&::after {
+			bottom: 0;
+			content: '”';
+			display: block;
+			font-size: calc(40 / 16 * 1em);
+			line-height: 0;
+			opacity: 0.2;
+			pointer-events: none;
+			position: absolute;
+			right: 0;
+			user-select: none;
+		}
+	}
+
+	figure {
+		margin: 0;
+	}
+
+	figcaption {
+		background: none;
+		font-size: calc(14 / 16 * 1em);
+		font-weight: normal;
+		line-height: 1.6;
+		padding: 0.8em 1.2em;
+		text-align: left;
+	}
+
+	hr {
+		color: $border-primary-color;
+		background: $border-primary-color;
+		border-style: none;
+		height: 2px;
+		margin: 50px auto;
+		width: calc(95 / 100 * 100%);
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	/**
+	 * メールフォーム
+	 *
+	 */
+	.cc-form-description {
+		margin-bottom: 20px;
+	}
+
+	.cc-form {
+		margin: 0 auto;
+
+		&-agreement {
+			text-align: center;
+			margin-top: 20px;
+		}
+
+		&-submit {
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	.cc-form-field-list {
+		// **
+	}
+
+	.cc-form-fieldset {
+		display: flex;
+		background: $gray-color;
+		padding: 15px 20px;
+
+		@media (--sm-lte) {
+			display: block;
+		}
+
+		fieldset {
+			display: contents;
+		}
+
+		> div {
+			display: flex;
+			width: 100%;
+			border: none;
+			margin: 0;
+			padding: 0;
+
+			@media (--sm-lte) {
+				display: block;
+			}
+		}
+
+		legend {
+			margin: 0;
+			padding: 0;
+		}
+
+		&-heading {
+			width: 250px;
+			font-weight: bold;
+			display: flex;
+			align-items: center;
+			font-size: 1.8rem;
+
+			@media (--sm-lte) {
+				width: 100%;
+				font-size: calc(36 / 750 * 100vw);
+			}
+
+			label {
+				display: block;
+			}
+
+			.required,
+			.optional {
+				display: inline-block;
+				color: $lightest-color;
+				font-size: 1.2rem;
+				line-height: 1;
+				padding: 5px;
+				border-radius: 2px;
+				margin: 0 0 0 10px;
+			}
+
+			.required {
+				background: $warning-color;
+			}
+
+			.optional {
+				background: $darkest-color;
+			}
+		}
+
+		&-body {
+			width: calc(100% - 250px);
+
+			@media (--sm-lte) {
+				width: 100%;
+				margin-top: calc(20 / 750 * 100vw);
+			}
+		}
+	}
+
+	.mail-field {
+		margin: 15px 0 0;
+
+		@media (--sm-lte) {
+			margin-top: calc(20 / 750 * 100vw);
+		}
+
+		&:first-child,
+		&:only-child {
+			margin: 0;
+		}
+
+		&[data-type='text'],
+		&[data-type='select'] {
+			display: grid;
+			grid-template-columns: auto 1fr auto;
+			grid-template-rows: auto auto auto;
+			grid-template-areas:
+				'before-attachment input after-attachment'
+				'description description description'
+				'error-message error-message error-message';
+			grid-gap: 0;
+			justify-content: flex-start;
+			align-items: center;
+
+			.mail-before-attachment {
+				grid-area: before-attachment;
+				margin: 0 15px 0 0;
+
+				&:empty {
+					margin: 0;
+				}
+			}
+
+			.mail-input {
+				grid-area: input;
+			}
+
+			.mail-after-attachment {
+				grid-area: after-attachment;
+				margin: 0 0 0 15px;
+
+				&:empty {
+					margin: 0;
+				}
+			}
+
+			.mail-description {
+				grid-area: description;
+				font-size: calc(12 / 16 * 1em);
+
+				@media (--sm-lte) {
+					font-size: calc(28 / 750 * 100vw);
+					line-height: calc(36 / 750 * 100vw);
+					margin-top: calc(20 / 750 * 100vw);
+				}
+			}
+
+			.error-message {
+				grid-area: error-message;
+				font-size: calc(12 / 16 * 1em);
+				color: $warning-color;
+			}
+		}
+
+		.mail-before-attachment {
+			font-weight: bold;
+
+			@media (--sm-gt) {
+				height: 100%;
+				padding-top: 3px;
+			}
+		}
+
+		.mail-after-attachment {
+			@media (--sm-gt) {
+				height: 100%;
+				padding-top: 3px;
+			}
+		}
+
+		.mail-input {
+			grid-area: input;
+			display: block;
+
+			input:not([type='radio']):not([type='checkbox']),
+			textarea {
+				appearance: none;
+				font-size: 1.6rem;
+				font-family: inherit;
+				max-width: 100%;
+				background: $lightest-color;
+				border: 1px solid $border-primary-color;
+				border-radius: 0;
+				padding: 8px;
+
+				@media (--sm-lte) {
+					font-size: calc(32 / 750 * 100vw);
+					padding: calc(24 / 750 * 100vw);
+				}
+
+				&:focus {
+					border-color: $btn-glow-color;
+					box-shadow: 0 0 5px 1px $btn-glow-color, 0 0 5px 0 $lightest-color;
+					outline: none;
+				}
+			}
+
+			input:not([type='radio']):not([type='checkbox']) {
+				&:not([size]) {
+					width: 100%;
+
+					@media (--sm-gt) {
+						min-height: 37px;
+					}
+
+					&[data-size='short'] {
+						width: 260px;
+
+						@media (--sm-lte) {
+							width: 100%;
+						}
+					}
+
+					&[data-size='half'] {
+						width: calc(50 / 100 * 100%);
+
+						@media (--sm-lte) {
+							width: 100%;
+						}
+					}
+
+					// 郵便番号用　不要の場合削除
+					&[data-type='zip'] {
+						width: 100px;
+
+						@media (--sm-lte) {
+							width: calc(240 / 750 * 100vw);
+						}
+					}
+				}
+			}
+
+			textarea {
+				resize: vertical;
+				min-height: 200px;
+
+				@media (--sm-lte) {
+					min-height: calc(250 / 750 * 100vw);
+				}
+
+				&:not([cols]) {
+					width: 100%;
+				}
+			}
+
+			select {
+				cursor: pointer;
+				font-size: 1.6rem;
+				padding: 8px 30px 8px 8px;
+				appearance: none;
+				background: $lightest-color;
+				background-image: url('data:image/svg+xml;utf8,<svg width="8" height="5" viewBox="0 0 8 5" fill="black" xmlns="http://www.w3.org/2000/svg"><path d="M0.94 0L4 3.09042L7.06 0L8 0.951417L4 5L0 0.951417L0.94 0Z" fill="black"/></svg>'); // 任意の画像に変更してください。
+				background-repeat: no-repeat;
+				background-position: right 12px top 50%;
+				border: 1px solid $border-primary-color;
+				border-radius: 0;
+
+				@media (--sm-lte) {
+					font-size: calc(32 / 750 * 100vw);
+					padding: calc(24 / 750 * 100vw) calc(60 / 750 * 100vw) calc(24 / 750 * 100vw) calc(24 / 750 * 100vw);
+				}
+
+				&:focus {
+					border-color: $btn-glow-color;
+					box-shadow: 0 0 5px 1px $btn-glow-color, 0 0 5px 0 $lightest-color;
+					outline: none;
+				}
+			}
+		}
+
+		.mail-input-checkbox {
+			label {
+				position: relative;
+				cursor: pointer;
+				text-align: left;
+
+				span {
+					position: relative;
+					display: inline-block;
+					font-size: 1.6rem;
+					line-height: 24px;
+					padding-left: 34px;
+
+					@media (--sm-lte) {
+						font-size: calc(32 / 750 * 100vw);
+						padding-left: calc(60 / 750 * 100vw);
+					}
+
+					&::before {
+						content: '';
+						display: block;
+						position: absolute;
+						top: 2px;
+						left: 0;
+						width: 20px;
+						height: 20px;
+						border: 1px solid $border-primary-color;
+						background: $lightest-color;
+
+						@media (--sm-lte) {
+							width: calc(40 / 750 * 100vw);
+							height: calc(40 / 750 * 100vw);
+							top: calc(50% - (20 / 750 * 100vw));
+						}
+					}
+				}
+			}
+
+			input {
+				border-radius: 0;
+				appearance: none;
+
+				&[type='checkbox'] {
+					position: absolute;
+					opacity: 0;
+					appearance: none;
+
+					&:checked {
+						& + span {
+							&::after {
+								content: '';
+								display: block;
+								border-left: solid 3px $primary-color;
+								border-bottom: solid 3px $primary-color;
+								width: 14px;
+								height: 8px;
+								transform: rotate(-45deg);
+								position: absolute;
+								left: 3px;
+								top: 6px;
+
+								@media (--sm-lte) {
+									top: calc(12 / 750 * 100vw);
+									left: calc(6 / 750 * 100vw);
+									width: calc(26 / 750 * 100vw);
+									height: calc(17 / 750 * 100vw);
+								}
+							}
+						}
+					}
+
+					&:focus {
+						+ span {
+							border-color: $btn-glow-color;
+							box-shadow: 0 0 5px 1px $btn-glow-color, 0 0 5px 0 $lightest-color;
+							outline: none;
+						}
+					}
+				}
+			}
+		}
+
+		.mail-input-radio {
+			@media (--sm-gt) {
+				margin-right: 10px;
+			}
+
+			label {
+				position: relative;
+				cursor: pointer;
+				text-align: left;
+
+				span {
+					position: relative;
+					display: inline-block;
+					font-size: 1.6rem;
+					line-height: 24px;
+					padding-left: 28px;
+
+					@media (--sm-lte) {
+						display: block;
+						font-size: calc(32 / 750 * 100vw);
+						padding-left: calc(55 / 750 * 100vw);
+					}
+
+					&::before {
+						content: '';
+						display: block;
+						position: absolute;
+						top: 2px;
+						left: 0;
+						width: 20px;
+						height: 20px;
+						border-radius: 50%;
+						border: 1px solid $border-primary-color;
+						background: $lightest-color;
+
+						@media (--sm-lte) {
+							width: calc(36 / 750 * 100vw);
+							height: calc(36 / 750 * 100vw);
+							top: calc(7 / 750 * 100vw);
+						}
+					}
+				}
+			}
+
+			input {
+				border-radius: 0;
+				appearance: none;
+
+				&[type='radio'] {
+					position: absolute;
+					opacity: 0;
+					appearance: none;
+
+					&:checked {
+						& + span {
+							&::after {
+								content: '';
+								display: block;
+								position: absolute;
+								top: 7px;
+								left: 5px;
+								width: 10px;
+								height: 10px;
+								border: 1px solid $primary-color;
+								border-radius: 50%;
+								background: $primary-color;
+
+								@media (--sm-lte) {
+									top: calc(15 / 750 * 100vw);
+									left: calc(8 / 750 * 100vw);
+									width: calc(20 / 750 * 100vw);
+									height: calc(20 / 750 * 100vw);
+								}
+							}
+						}
+					}
+
+					&:focus {
+						+ span {
+							border-color: $btn-glow-color;
+							box-shadow: 0 0 5px 1px $btn-glow-color, 0 0 5px 0 $lightest-color;
+							outline: none;
+						}
+					}
+				}
+			}
+		}
+
+		// input type="file"用
+		// 使用しない場合は、以下コメントアウトする
+		.mail-input-file {
+			cursor: pointer;
+			display: block;
+			width: calc(70 / 100 * 100%);
+
+			@media (--sm-lte) {
+				width: 100%;
+			}
+
+			label {
+				position: relative;
+				display: flex;
+				justify-content: space-between;
+
+				@media (--sm-lte) {
+					display: block;
+				}
+			}
+
+			&-input {
+				width: calc(100% - 170px);
+				font-size: 1.6rem;
+				line-height: 1;
+				max-width: 100%;
+				background: $lightest-color;
+				border: 1px solid $border-primary-color;
+				padding: 8px;
+				overflow: hidden;
+
+				@media (--sm-lte) {
+					width: 100%;
+					font-size: calc(32 / 750 * 100vw);
+					padding: calc(20 / 750 * 100vw);
+				}
+			}
+
+			&-btn {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 160px;
+
+				@media (--sm-lte) {
+					display: block;
+					width: auto;
+					text-align: center;
+					margin-top: calc(30 / 750 * 100vw);
+				}
+
+				span {
+					position: relative;
+					display: inline-block;
+					color: $lightest-color;
+					text-align: center;
+					padding: 2px 20px;
+					border-radius: 18px;
+					background: $gray-color04;
+
+					@media (--sm-lte) {
+						font-size: calc(32 / 750 * 100vw);
+						border-radius: calc(50 / 750 * 100vw);
+						padding: calc(20 / 750 * 100vw) calc(50 / 750 * 100vw);
+					}
+				}
+			}
+
+			&:hover {
+				@media (--sm-gt) {
+					.mail-input-file-btn {
+						span {
+							background: $primary-color;
+						}
+					}
+				}
+			}
+
+			// &-preview + &-btn {
+			// 	margin-top: 30px;
+
+			// 	@media (--sm-lte) {
+			// 		margin-top: calc(40 / 750 * 100vw);
+			// 	}
+			// }
+
+			input[type='file'] {
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 1;
+				opacity: 0;
+				appearance: none;
+				width: 100%;
+				height: 100%;
+				cursor: pointer;
+
+				&:focus {
+					+ label {
+						border-color: $btn-glow-color;
+						box-shadow: 0 0 5px 1px $btn-glow-color, 0 0 5px 0 $lightest-color;
+						outline: none;
+					}
+				}
+			}
+
+			// label {
+			// 	appearance: none;
+			// 	border-radius: 0;
+			// 	cursor: pointer;
+
+			// 	@media (--sm-gt) {
+			// 		display: flex;
+			// 		justify-content: space-between;
+			// 	}
+
+			// 	@media (--sm-lte) {
+			// 		padding: 0;
+			// 	}
+
+			// 	span {
+			// 		// background: $gray-color;
+			// 		// padding: 10px 30px;
+			// 		// border-radius: 10px;
+			// 		// display: inline-block;
+			// 		// position: relative;
+
+			// 		@media (--sm-lte) {
+			// 			display: block;
+			// 			width: 100%;
+			// 			padding: calc(20 / 750 * 100vw);
+			// 		}
+
+			// 		&.c-form__field-file-btn {
+			// 			@media (--sm-lte) {
+			// 				display: block;
+			// 				text-align: center;
+			// 				width: calc(320 / 750 * 100vw);
+			// 				margin: 0 auto;
+			// 				padding: calc(20 / 750 * 100vw);
+			// 			}
+			// 		}
+			// 	}
+			// }
+		}
+	}
+
+	// ****************************************
+	// 💊 ヘルパークラス
+	// 👇 以下 👇
+	// 🚫 削除非推奨 🚫
+	// ****************************************
+	// %grid-frame {
+	// 	align-content: flex-start;
+	// 	align-items: flex-start;
+	// 	display: flex;
+	// 	flex-flow: row wrap;
+	// 	justify-content: flex-start;
+	// }
+
+	// .grid-frame {
+	// 	@extend %grid-frame;
+	// }
+
+	// .grid-frame-flex {
+	// 	@extend %grid-frame;
+	// 	flex-wrap: nowrap;
+	// }
+
+	// @for $i from 1 through 12 {
+	// 	.grid-xs-#{$i} {
+	// 		@media (--xs) {
+	// 			flex-grow: 0;
+	// 			flex-shrink: 0;
+	// 			flex-basis: calc(#{$i} / 12 * 100%);
+	// 		}
+	// 	}
+
+	// 	.grid-sm-#{$i} {
+	// 		@media (--sm) {
+	// 			flex-grow: 0;
+	// 			flex-shrink: 0;
+	// 			flex-basis: calc(#{$i} / 12 * 100%);
+	// 		}
+	// 	}
+
+	// 	.grid-md-#{$i} {
+	// 		@media (--md) {
+	// 			flex-grow: 0;
+	// 			flex-shrink: 0;
+	// 			flex-basis: calc(#{$i} / 12 * 100%);
+	// 		}
+	// 	}
+
+	// 	.grid-lg-#{$i} {
+	// 		@media (--lg) {
+	// 			flex-grow: 0;
+	// 			flex-shrink: 0;
+	// 			flex-basis: calc(#{$i} / 12 * 100%);
+	// 		}
+	// 	}
+
+	// 	.grid-xl-#{$i} {
+	// 		@media (--xl) {
+	// 			flex-grow: 0;
+	// 			flex-shrink: 0;
+	// 			flex-basis: calc(#{$i} / 12 * 100%);
+	// 		}
+	// 	}
+	// }
+
+	// .grid-xs-d5 {
+	// 	@media (--xs) {
+	// 		flex-grow: 0;
+	// 		flex-shrink: 0;
+	// 		flex-basis: calc(1 / 5 * 100%);
+	// 	}
+	// }
+
+	// .grid-sm-d5 {
+	// 	@media (--sm) {
+	// 		flex-grow: 0;
+	// 		flex-shrink: 0;
+	// 		flex-basis: calc(1 / 5 * 100%);
+	// 	}
+	// }
+
+	// .grid-md-d5 {
+	// 	@media (--md) {
+	// 		flex-grow: 0;
+	// 		flex-shrink: 0;
+	// 		flex-basis: calc(1 / 5 * 100%);
+	// 	}
+	// }
+
+	// .grid-lg-d5 {
+	// 	@media (--lg) {
+	// 		flex-grow: 0;
+	// 		flex-shrink: 0;
+	// 		flex-basis: calc(1 / 5 * 100%);
+	// 	}
+	// }
+
+	// .grid-xl-d5 {
+	// 	@media (--xl) {
+	// 		flex-grow: 0;
+	// 		flex-shrink: 0;
+	// 		flex-basis: calc(1 / 5 * 100%);
+	// 	}
+	// }
+
+	// .grid-xs-flex {
+	// 	@media (--xs) {
+	// 		flex: 0 1 100%;
+	// 	}
+	// }
+
+	// .grid-sm-flex {
+	// 	@media (--sm) {
+	// 		flex: 0 1 100%;
+	// 	}
+	// }
+
+	// .grid-md-flex {
+	// 	@media (--md) {
+	// 		flex: 0 1 100%;
+	// 	}
+	// }
+
+	// .grid-lg-flex {
+	// 	@media (--lg) {
+	// 		flex: 0 1 100%;
+	// 	}
+	// }
+
+	// .grid-xl-flex {
+	// 	@media (--xl) {
+	// 		flex: 0 1 100%;
+	// 	}
+	// }
+
+	// マージンヘルパー
+	.mt-zero {
+		margin-top: 0;
+	}
+
+	.mb-zero {
+		margin-bottom: 0;
+	}
+
+	.mt-narrow {
+		// stylelint-disable at-rule-empty-line-before
+		// @media (--xs) {
+		// 	margin-top: $margin-narrow-xs;
+		// }
+
+		// @media (--sm) {
+		// 	margin-top: $margin-narrow-sm;
+		// }
+
+		// @media (--md) {
+		// 	margin-top: $margin-narrow-md;
+		// }
+
+		// @media (--lg) {
+		// 	margin-top: $margin-narrow-lg;
+		// }
+
+		// @media (--xl) {
+		// 	margin-top: $margin-narrow-xl;
+		// }
+		// stylelint-enable at-rule-empty-line-before
+	}
+
+	.mt-wide {
+		// stylelint-disable at-rule-empty-line-before
+		// @media (--xs) {
+		// 	margin-top: $margin-wide-xs;
+		// }
+
+		// @media (--sm) {
+		// 	margin-top: $margin-wide-sm;
+		// }
+
+		// @media (--md) {
+		// 	margin-top: $margin-wide-md;
+		// }
+
+		// @media (--lg) {
+		// 	margin-top: $margin-wide-lg;
+		// }
+
+		// @media (--xl) {
+		// 	margin-top: $margin-wide-xl;
+		// }
+		// stylelint-enable at-rule-empty-line-before
+	}
+
+	.mb-narrow {
+		// stylelint-disable at-rule-empty-line-before
+		// @media (--xs) {
+		// 	margin-bottom: $margin-narrow-xs;
+		// }
+
+		// @media (--sm) {
+		// 	margin-bottom: $margin-narrow-sm;
+		// }
+
+		// @media (--md) {
+		// 	margin-bottom: $margin-narrow-md;
+		// }
+
+		// @media (--lg) {
+		// 	margin-bottom: $margin-narrow-lg;
+		// }
+
+		// @media (--xl) {
+		// 	margin-bottom: $margin-narrow-xl;
+		// }
+		// stylelint-enable at-rule-empty-line-before
+	}
+
+	.mb-wide {
+		// stylelint-disable at-rule-empty-line-before
+		// @media (--xs) {
+		// 	margin-bottom: $margin-wide-xs;
+		// }
+
+		// @media (--sm) {
+		// 	margin-bottom: $margin-wide-sm;
+		// }
+
+		// @media (--md) {
+		// 	margin-bottom: $margin-wide-md;
+		// }
+
+		// @media (--lg) {
+		// 	margin-bottom: $margin-wide-lg;
+		// }
+
+		// @media (--xl) {
+		// 	margin-bottom: $margin-wide-xl;
+		// }
+		// stylelint-enable at-rule-empty-line-before
+	}
+
+	// ****************************************
+	// 💊 ヘルパークラス
+	// 👆 以上 👆
+	// ****************************************
+
+	// ****************************************
+	// wp用
+	// 👇 以下 👇
+	// 必要ない場合は削除する 🔪
+	// ****************************************
+
+	// [data-wp] {
+	// 	margin-bottom: $wp-default-margin-bottom;
+	// }
+
+	// // ボタンタイプ
+	// .wp-btn {
+	// 	appearance: none;
+	// 	background: $primary-color;
+	// 	border: none;
+	// 	color: $lightest-color;
+	// 	display: inline-block;
+	// 	font-size: calc(17 / 16 * 1em);
+	// 	line-height: 2;
+	// 	min-width: 15em;
+	// 	padding: 1em 2em;
+	// 	position: relative;
+	// 	text-align: center;
+	// 	text-decoration: none;
+	// 	vertical-align: middle;
+
+	// 	&:active,
+	// 	&:focus {
+	// 		box-shadow: 0 0 10px 0 $btn-glow-color, 0 0 10px 0 $lightest-color;
+	// 	}
+
+	// 	&:disabled {
+	// 		opacity: 0.6;
+	// 	}
+
+	// 	&::after {
+	// 		border: 2px solid currentColor;
+	// 		border-width: 2px 2px 0 0;
+	// 		content: '';
+	// 		display: block;
+	// 		height: 10px;
+	// 		margin-top: -5px;
+	// 		position: absolute;
+	// 		right: 0.7em;
+	// 		top: 50%;
+	// 		transform: rotate(45deg);
+	// 		width: 10px;
+	// 	}
+	// }
+
+	// [data-wp-button-kind='link'] .wp-btn {
+	// 	//
+	// }
+
+	// [data-wp-button-kind='em'] .wp-btn {
+	// 	background: $primary-color-darker;
+	// }
+
+	// [data-wp-button-kind='external'] .wp-btn {
+	// 	span {
+	// 		&::after {
+	// 			@include bge-icon;
+	// 			content: $fa-external-link;
+	// 			font-size: 1em;
+	// 			margin-left: 0.5em;
+	// 			vertical-align: middle;
+	// 		}
+	// 	}
+	// }
+
+	// [data-wp-button-kind='back'] .wp-btn {
+	// 	&::before {
+	// 		background: none;
+	// 		border: 2px solid currentColor;
+	// 		border-width: 0 0 2px 2px;
+	// 		content: '';
+	// 		display: block;
+	// 		height: 10px;
+	// 		left: 0.7em;
+	// 		margin-top: -5px;
+	// 		position: absolute;
+	// 		top: 50%;
+	// 		transform: rotate(45deg);
+	// 		width: 10px;
+	// 	}
+
+	// 	&::after {
+	// 		display: none;
+	// 	}
+	// }
+
+	// ****************************************
+	// 👆 以上 👆
+	// wp用
+	// ****************************************
+}
+// stylelint-enable selector-class-pattern, selector-nested-pattern

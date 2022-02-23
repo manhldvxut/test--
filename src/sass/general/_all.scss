@@ -1,0 +1,25 @@
+// stylelint-disable selector-max-universal
+// this is universal selector rules
+* {
+	&,
+	&::before,
+	&::after {
+		box-sizing: border-box;
+	}
+
+	&::selection {
+		background-color: $selection-background-color;
+	}
+
+	&::placeholder {
+		opacity: 1;
+		color: $placeholder-color;
+	}
+}
+
+img{
+	width: 100%;
+	max-width: 100%;
+}
+
+// stylelint-enable selector-max-universal

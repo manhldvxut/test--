@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<title>テンプレート一覧</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+		<style>
+			.list-group-item a {
+				display: block;
+			}
+
+			.list-group + h5 {
+				margin-top: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="c-content-main">
+			<main class="container theme-showcase">
+				ブランチの作業
+				<h1 class="my-5">テンプレート</h1>
+				<div class="alert alert-warning" role="alert">
+					<h2 class="alert-heading">⚠️ コーディング時の注意</h2>
+					<h3 class="mt-4">デザイン確認</h3>
+					<ul>
+						<li>ブレイクポイントは確認しましたか？</li>
+						<li>必要なパーツは揃っていますか？</li>
+						<li>PCの横の最大幅が大きすぎないですか？</li>
+						<li>本文の1行の文字数は適切ですか？読みにくくないですか？</li>
+						<li>ウィンドウサイズを変更したときに、見切れる設計になっていませんか？</li>
+						<li>SPでの文字が小さすぎないですか？実寸で読みにくくないですか？</li>
+						<li>CMS要件に合っていますか？</li>
+					</ul>
+					<hr />
+					<h3>コーディング確認</h3>
+					<ul>
+						<li><a href="/__guideline/coding-guideline/#🌐-対応ブラウザとデバイス">対応ブラウザ</a>は確認しましたか？</li>
+						<li>メタ情報の手配は済んでいますか？</li>
+						<li>利用するJavaScriptライブラリは把握できていますか？ライセンスは確認しましたか？</li>
+						<li>画像のファイルサイズを気にしていますか？拡張子は適切ですか？</li>
+						<li><a href="/__guideline/coding-guideline/js.html#実行頻度の多い処理に気をつける">パフォーマンスに影響を及ぼす処理</a>を書いていませんか？</li>
+						<li>フォーカスインジケーターを消していませんか？</li>
+						<li>OSのスクロールバー表示をオンにして、スクロールバーの発生を確認していますか？</li>
+					</ul>
+				</div>
+				<!-- ⚠️ 注意: 番号は重複しないようにしてください。 -->
+				<h5>トップページ</h5>
+				<div class="list-group">
+					<!-- トップページは000番台 -->
+					<div class="list-group-item"><a href="000_home.html">トップページ</a></div>
+				</div>
+
+				<h5>下層固定ページ</h5>
+				<div class="list-group">
+					<!-- 詳細ページは100番台 -->
+					<div class="list-group-item"><a href="100_sub.html">下層固定ページ</a></div>
+				</div>
+
+				<h5>ブログA</h5>
+				<div class="list-group">
+					<!-- インデックスページは200番台 -->
+					<div class="list-group-item"><a href="200_blog_index.html">ブログA一覧ページ</a></div>
+					<!-- 詳細ページは100番台 -->
+					<div class="list-group-item"><a href="101_sub.html">ブログ詳細ページ</a></div>
+				</div>
+
+				<h5>ブログB</h5>
+				<div class="list-group">
+					<div class="list-group-item"><a href="210_blog_index.html">ブログB一覧ページ</a></div>
+				</div>
+
+				<h5>メールフォーム</h5>
+				<div class="list-group">
+					<!-- メールフォームは300番台 -->
+					<div class="list-group-item"><a href="300_form_input.html">メールフォーム入力ページ</a></div>
+					<div class="list-group-item"><a href="301_form_confirm.html">メールフォーム確認ページ</a></div>
+					<div class="list-group-item"><a href="302_form_thanks.html">メールフォーム完了ページ</a></div>
+					<!-- その他は400〜800番台 -->
+					<!-- スタイルガイドは900番台 -->
+				</div>
+				<!-- <div class="list-group mt-5">
+					<div class="list-group-item"><a href="../__guideline/coding-guideline/">📖 コーディングガイドライン</a></div>
+				</div> -->
+			</main>
+		</div>
+	</body>
+</html>

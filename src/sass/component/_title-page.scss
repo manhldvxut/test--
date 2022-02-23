@@ -1,0 +1,16 @@
+// # 下層ページ タイトル
+// ========== ========== ========== ========== ==========
+.c-title-page {
+	font-size: 1.6rem;
+
+	h1 {
+		text-align: left;
+		padding: 15px 25px;
+		background: $primary-color;
+		color: $lightest-color;
+		border: 1px solid transparent;
+		border-radius: 5px;
+		margin-bottom: 30px;
+		font-size: calc(28 / 16 * 1em);
+	}
+}

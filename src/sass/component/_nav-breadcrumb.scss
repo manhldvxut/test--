@@ -1,0 +1,95 @@
+// # breadcrumb
+// ========== ========== ========== ========== ==========
+.c-nav-breadcrumb {
+	font-size: 1.6rem;
+	margin: 0 auto;
+	padding: 15px 0;
+
+	ol {
+		margin: 0;
+		padding: 0;
+		display: flex;
+		justify-content: flex-start;
+		padding-left: 0;
+
+		>li {
+			list-style: none;
+			@include fontSize(14px);
+			padding: 0 15px;
+
+			@include media-sp {
+				font-size: vw(24px);
+			}
+
+			&:first-child {
+				padding-left: 0;
+			}
+
+			&:last-child {
+				padding-right: 0;
+
+				a {
+					::after {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	a {
+		color: $secondary-color;
+		display: inline-block;
+		text-decoration: none;
+		@include fontSize(14px);
+
+		@include media-sp {
+			font-size: vw(24px);
+		}
+
+		::after {
+			content: ' > ';
+			display: inline-block;
+			margin: 0 15px 0 20px;
+			color: $secondary-color-darker;
+		}
+	}
+
+	&__item {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+
+		a {
+			position: relative;
+
+			&::after {
+				@extend %absolute;
+				width: 100%;
+				height: 1px;
+				background: $secondary-color;
+				left: 0;
+				right: 0;
+				margin: auto;
+				bottom: -3px;
+
+				@include media-sp {
+					bottom: vw(-3px);
+				}
+			}
+		}
+	}
+
+	&__item[data-breadcrumb='current'] {
+		a {
+			text-decoration: none;
+			cursor: default;
+			pointer-events: none;
+		}
+	}
+
+	.list-right--icon:before {
+		right: -17px;
+		border-color: $secondary-color;
+	}
+}

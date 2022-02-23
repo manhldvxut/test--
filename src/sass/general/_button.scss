@@ -1,0 +1,69 @@
+// # button
+// ========== ========== ========== ========== ==========
+button {
+	border-radius: 0;
+}
+
+
+.c-btn {
+	color: $darkest-color;
+	border: 1px solid $darkest-color;
+	@include fontSize(16px);
+	text-align: center;
+	display: block;
+	padding: 10px 50px;
+	position: relative;
+	text-decoration: none;
+	max-width: 280px;
+	font-weight: bold;
+	border-radius: 25px;
+
+	&.list-right--icon {
+		&::before {
+			right: 20px;
+		}
+	}
+}
+
+// view more
+
+.c-viewmore {
+	text-decoration: none;
+	color: $darkest-color;
+	@include fontSize(14px);
+	padding-right: 30px;
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+
+	&::before {
+		@extend %absolute;
+		width: 30px;
+		height: 1px;
+		background: $darkest-color;
+		bottom: 0;
+		top: 2px;
+		right: -5px;
+		margin: auto;
+	}
+
+	.list-right--icon {
+		width: 19px;
+		height: 19px;
+		border-radius: 50%;
+		display: block;
+		border: 1px solid $btn-arrow;
+		position: absolute;
+		top: 2px;
+		bottom: 0;
+		margin: auto;
+		right: -35px;
+
+		&::before {
+			right: 0;
+			left: 0;
+			margin: auto;
+			border-color: $btn-arrow;
+		}
+	}
+}

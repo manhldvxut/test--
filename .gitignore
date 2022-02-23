@@ -1,0 +1,28 @@
+node_modules
+.sass-cache
+package-lock.json
+yarn.lock
+npm-error.log
+yarn-error.log
+.DS_Store
+
+# ignore file types
+*.zip
+*.psd
+*.ai
+*.sql
+
+# docs
+docs/_book
+docs/**/*.pdf
+docs/node_modules
+htdocs/__guideline/**/*.pdf
+
+# printout
+printout/*
+!printout/pagelist.txt
+
+webhook-current.log
+
+# test
+htdocs/__ignore-test

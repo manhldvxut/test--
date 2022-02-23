@@ -1,0 +1,116 @@
+// view port
+
+$vw-viewport: 750;
+
+@function vw($font) {
+	$vw-context: $vw-viewport * 0.01 * 1px;
+	@return $font / $vw-context * 1vw;
+	@return $font;
+}
+
+
+
+
+@function calculateRem($size) {
+	$remSize: $size / 16px;
+	@return #{$remSize}rem;
+}
+
+@mixin fontSize($size) {
+	font-size: calculateRem($size);
+}
+
+/*h1 {
+  @include fontSize(32px);
+}
+*/
+
+@mixin calc-sp-font($size: 32, $l-height: 1em, $l-spacing: normal) {
+	font-size: #{$size / 750 * 100}vw;
+	letter-spacing: $l-spacing;
+
+	@if ($l-height==1em) {
+		line-height: $l-height;
+	}
+
+	@else {
+		line-height: #{$l-height/$size}em;
+	}
+}
+
+@function calc-sp-size($size) {
+	$size-calculated: #{$size / 750 * 100}vw;
+	@return $size-calculated;
+}
+
+
+/*@include calc-sp-font(26, 1em, 2px);
+
+return to :
+
+  font-size: 3.46667vw;
+  letter-spacing: 2px;
+  line-height: 1em;
+
+*/
+
+
+// =================== Media Query - Responsive ==================
+@mixin media-min($breakpoint) {
+	@media (min-width: #{$breakpoint}) {
+		@content;
+	}
+}
+
+@mixin media-max($breakpoint) {
+	@media (max-width: #{$breakpoint}) {
+		@content;
+	}
+}
+
+@mixin media-pc($breakpoint: 769px) {
+	@media (min-width: #{$breakpoint}) {
+		@content;
+	}
+}
+
+//iphone
+@mixin media-sp($breakpoint: 767px) {
+	@media (max-width: #{$breakpoint}) {
+		@content;
+	}
+}
+
+// ipad and iphone
+
+@mixin media-si($breakpoint: 768px) {
+	@media (max-width: #{$breakpoint}) {
+		@content;
+	}
+}
+
+//ipad
+@mixin media-ip($breakpoint: 768px) {
+	@media (min-width: #{$breakpoint}) and (max-width: 1023px) {
+		@content;
+	}
+}
+
+//ipad pro
+@mixin media-pro($breakpoint: 1024px) {
+	@media (min-width: #{$breakpoint}) and (max-width: 1365px) {
+		@content;
+	}
+}
+
+@include media-pc {
+	.pc-only {
+		display: none;
+	}
+}
+
+@include media-sp {
+	.sp-only {
+		display: none;
+	}
+}

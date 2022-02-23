@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>__ページタイトル__ | __サイトタイトル__</title>
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="description" content="__ディスクリプション__" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="__サイトタイトル__" />
+		<meta property="og:site_name" content="__サイトタイトル__" />
+		<meta property="og:description" content="__ディスクリプション__" />
+		<meta property="og:url" content="__SNSからリンクさせるURL__" />
+		<meta property="og:image" content="__OGP用画像__" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<link rel="shortcut icon" href="/favicon.png" />
+		<link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700&amp;subset=japanese" rel="stylesheet" />
+		<link rel="stylesheet" href="/css/style.css" />
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/script.js" defer="defer"></script>
+	</head>
+	<body class="c-page-sub">
+		<div class="c-page-sub__base">
+			<div class="c-page-sub__header">
+				<header class="c-header">
+					<div class="c-header__body">
+						<div class="c-header__title">
+							<div class="c-header__site-name">
+								<div>
+									<a href="__URL__"><span><img src="/img/logo.png" width="130" height="44" alt=""></span></a>
+								</div>
+							</div>
+							<p class="c-header__description">__Lorem ipsum dolor sit amet, consectetur adipisicing elit.__</p>
+						</div>
+						<div class="c-header__info">
+							<ul class="c-header__links">
+								<li>
+									<a href="__URL__"><span>__会社概要__</span></a>
+								</li>
+								<li>
+									<a href="__URL__"><span>__新着情報__</span></a>
+								</li>
+								<li>
+									<a href="__URL__"><span>__サイトマップ__</span></a>
+								</li>
+							</ul>
+							<div class="c-header__tel">
+								<a href="tel:0000000000"><span>00-0000-0000</span></a>
+							</div>
+						</div>
+					</div>
+				</header>
+			</div>
+			<div class="c-page-sub__nav-global">
+				<nav class="c-nav-global" aria-label="メインメニュー">
+					<div class="c-nav-global__body">
+						<ul class="c-nav-global__list">
+							<li class="c-nav-global__item">
+								<a href="__URL__"><span>__コンテンツ__</span></a>
+							</li>
+							<li class="c-nav-global__item">
+								<a href="__URL__"><span>__コンテンツ__</span></a>
+							</li>
+							<li class="c-nav-global__item">
+								<a href="__URL__"><span>__コンテンツ__</span></a>
+							</li>
+							<li class="c-nav-global__item">
+								<a href="__URL__"><span>__コンテンツ__</span></a>
+							</li>
+							<li class="c-nav-global__item">
+								<a href="__URL__"><span>__コンテンツ__</span></a>
+							</li>
+							<li class="c-nav-global__item">
+								<a href="__URL__"><span>__コンテンツ__</span></a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+			<div class="c-page-sub__main">
+				<main class="c-page-sub__content">
+					<div>
+						<div class="c-page-sub__title-page">
+							<div class="c-title-page">
+								<h1>__ページタイトル__</h1>
+							</div>
+						</div>
+						<div class="c-page-sub__nav-breadcrumb">
+							<div class="c-nav-breadcrumb">
+								<ol itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList">
+									<li class="c-nav-breadcrumb__item" itemscope="itemscope" itemprop="itemListElement" itemtype="https://schema.org/ListItem" data-breadcrumb="home">
+										<a href="/" itemid="/" itemscope="itemscope" itemprop="item" itemtype="https://schema.org/WebPage"><span itemporp="name">Home</span></a> <meta itemprop="position" content="1" /><span class="c-nav-breadcrumb__separetor"></span>
+									</li>
+									<li class="c-nav-breadcrumb__item" itemscope="itemscope" itemprop="itemListElement" itemtype="https://schema.org/ListItem">
+										<a href="/first/" itemid="/first/" itemscope="itemscope" itemprop="item" itemtype="https://schema.org/WebPage"><span itemporp="name">Parent</span></a> <meta itemprop="position" content="2" /><span class="c-nav-breadcrumb__separetor"></span>
+									</li>
+									<li class="c-nav-breadcrumb__item" itemscope="itemscope" itemprop="itemListElement" itemtype="https://schema.org/ListItem" data-breadcrumb="current">
+										<a href="/first/about" itemid="/first/about" itemscope="itemscope" itemprop="item" itemtype="https://schema.org/WebPage"><span itemporp="name">Current</span></a>
+										<meta itemprop="position" content="3" />
+									</li>
+								</ol>
+							</div>
+						</div>
+						<div class="c-content-main">
+							<div class="cc-form" data-form="entry">
+								<!-- CMS要件: メールフォーム概要 -->
+								<div class="cc-form-description">
+									<p>こちらのフォームよりご応募ください。<br />記入いただいた内容を検討の上、弊社人事担当者よりメールにてご返信いたします。</p>
+								</div>
+								<!-- CMS要件: メールフォーム概要ここまで -->
+								<form id="MailMessageIndexForm" action="__PATH_TO__" novalidate="novalidate" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+									<input type="hidden" name="_method" value="POST" />
+									<input id="Token__TOKEN__" type="hidden" name="data[_Token][key]" value="__TOKEN__" />
+									<input id="MailMessageMode" type="hidden" name="data[MailMessage][mode]" />
+									<div class="cc-form-field-list">
+										<!-- ⚠️ グループ化している場合は fieldset/legend の構造 -->
+										<div class="cc-form-fieldset" id="GroupMailMessageField1">
+											<fieldset>
+												<legend class="cc-form-fieldset-heading"><span>フィールドグループ名</span><span class="required">必須</span></legend>
+												<div class="cc-form-fieldset-body">
+													<!-- ⚠️ 入力タイプによって data-type 属性を変更 -->
+													<div class="mail-field" id="FieldMailMessageField1" data-type="text">
+														<!-- ⚠️ グループ化している場合は 前見出し は labelとする -->
+														<label class="mail-before-attachment" for="MailMessageField1">前見出し</label><span class="mail-input"> <input id="MailMessageField1" type="text" name="data[MailMessage][field1]" maxlength="255" required="required" placeholder="placeholderが必要な場合は設定してください。" /></span><span class="mail-after-attachment">後見出し</span>
+														<div class="mail-description">説明文</div>
+														<div class="error-message">エラーメッセージ</div>
+													</div>
+													<div class="mail-field" id="FieldMailMessageField2" data-type="text">
+														<span class="mail-before-attachment"></span><span class="mail-input"> <input id="MailMessageField2" type="text" name="data[MailMessage][field2]" maxlength="255" required="required" /></span
+														><!-- ⚠️ グループ化している場合は 前見出しが空であれば 後見出しを labelとする -->
+														<label class="mail-after-attachment" for="MailMessageField2">後見出し</label>
+														<div class="mail-description">説明文</div>
+														<div class="error-message">エラーメッセージ</div>
+													</div>
+												</div>
+											</fieldset>
+										</div>
+										<!-- ⚠️ グループ化していない場合は div/label の構造 -->
+										<div class="cc-form-fieldset" id="GroupMailMessageField3">
+											<div>
+												<div class="cc-form-fieldset-heading"><label for="MailMessageField3">単体フィールド名</label><span class="required">必須</span></div>
+												<div class="cc-form-fieldset-body">
+													<div class="mail-field" id="FieldMailMessageField3" data-type="text">
+														<!-- ⚠️ グループ化していない場合は 前見出しも後見出しも label にはならない --><span class="mail-before-attachment">前見出し</span><span class="mail-input"> <input id="MailMessageField3" type="text" name="data[MailMessage][field3]" maxlength="255" required="required" /></span><span class="mail-after-attachment">後見出し</span>
+														<div class="mail-description">説明文</div>
+														<div class="error-message">エラーメッセージ</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="cc-form-fieldset" id="GroupMailMessageName">
+											<fieldset>
+												<legend class="cc-form-fieldset-heading"><span>氏名</span><span class="required">必須</span></legend>
+												<div class="cc-form-fieldset-body">
+													<div class="mail-field" id="FieldMailMessageLastName" data-type="text">
+														<label class="mail-before-attachment" for="MailMessageLastName">姓</label><span class="mail-input"> <input id="MailMessageLastName" type="text" name="data[MailMessage][LastName]" required="required" /></span><span class="mail-after-attachment"></span>
+														<div class="mail-description"></div>
+													</div>
+													<div class="mail-field" id="FieldMailMessageFirstName" data-type="text">
+														<label class="mail-before-attachment" for="MailMessageFirstName">名</label><span class="mail-input"> <input id="MailMessageFirstName" type="text" name="data[MailMessage][FirstName]" required="required" /></span><span class="mail-after-attachment"></span>
+														<div class="mail-description"></div>
+													</div>
+												</div>
+											</fieldset>
+										</div>
+										<div class="cc-form-fieldset" id="GroupMessageNameKana1">
+											<fieldset>
+												<legend class="cc-form-fieldset-heading"><span>フリガナ</span><span class="optional">任意</span></legend>
+												<div class="cc-form-fieldset-body">
+													<div class="mail-field" id="FieldMailMessageLastNameKana" data-type="text">
+														<label class="mail-before-attachment" for="MailMessageLastNameKana">セイ</label><span class="mail-input"> <input id="MailMessageLastNameKana" type="text" name="data[MailMessage][LastNameKana]" required="required" /></span><span class="mail-after-attachment"></span>
+														<div class="mail-description"></div>
+													</div>
+													<div class="mail-field" id="FieldMailMessageFirstNameKana" data-type="text">
+														<label class="mail-before-attachment" for="MailMessageFirstNameKana">メイ</label><span class="mail-input"> <input id="MailMessageFirstNameKana" type="text" name="data[MailMessage][FirstNameKana]" required="required" /></span><span class="mail-after-attachment"></span>
+														<div class="mail-description"></div>
+													</div>
+												</div>
+											</fieldset>
+										</div>
+										<div class="cc-form-fieldset" id="GroupMessageZip">
+											<fieldset>
+												<legend class="cc-form-fieldset-heading"><span>住所</span><span class="optional">任意</span></legend>
+												<div class="cc-form-fieldset-body">
+													<div class="mail-field" id="FieldMessageZip" data-type="text">
+														<label class="mail-before-attachment" for="MailMessageZip">〒</label><span class="mail-input"> <input id="MailMessageZip" name="data[MailMessage][zip]" maxlength="8" type="text" data-type="zip" /></span><span class="mail-after-attachment"></span>
+														<div class="mail-description">ハイフンを除く半角数字で入力してください</div>
+													</div>
+													<div class="mail-field" id="FieldMessageAddress1" data-type="select">
+														<label class="mail-before-attachment" for="MailMessageAddress1">都道府県</label
+														><span class="mail-input">
+															<select id="MailMessageAddress1" name="data[MailMessage][address_1]">
+																<option value="">選択してください</option>
+																<option value="北海道">北海道</option>
+																<option value="青森県">青森県</option>
+																<option value="岩手県">岩手県</option>
+																<option value="宮城県">宮城県</option>
+																<option value="秋田県">秋田県</option>
+																<option value="山形県">山形県</option>
+																<option value="福島県">福島県</option>
+																<option value="茨城県">茨城県</option>
+																<option value="栃木県">栃木県</option>
+																<option value="群馬県">群馬県</option>
+																<option value="埼玉県">埼玉県</option>
+																<option value="千葉県">千葉県</option>
+																<option value="東京都">東京都</option>
+																<option value="神奈川県">神奈川県</option>
+																<option value="新潟県">新潟県</option>
+																<option value="富山県">富山県</option>
+																<option value="石川県">石川県</option>
+																<option value="福井県">福井県</option>
+																<option value="山梨県">山梨県</option>
+																<option value="長野県">長野県</option>
+																<option value="岐阜県">岐阜県</option>
+																<option value="静岡県">静岡県</option>
+																<option value="愛知県">愛知県</option>
+																<option value="三重県">三重県</option>
+																<option value="滋賀県">滋賀県</option>
+																<option value="京都府">京都府</option>
+																<option value="大阪府">大阪府</option>
+																<option value="兵庫県">兵庫県</option>
+																<option value="奈良県">奈良県</option>
+																<option value="和歌山県">和歌山県</option>
+																<option value="鳥取県">鳥取県</option>
+																<option value="島根県">島根県</option>
+																<option value="岡山県">岡山県</option>
+																<option value="広島県">広島県</option>
+																<option value="山口県">山口県</option>
+																<option value="徳島県">徳島県</option>
+																<option value="香川県">香川県</option>
+																<option value="愛媛県">愛媛県</option>
+																<option value="高知県">高知県</option>
+																<option value="福岡県">福岡県</option>
+																<option value="佐賀県">佐賀県</option>
+																<option value="長崎県">長崎県</option>
+																<option value="熊本県">熊本県</option>
+																<option value="大分県">大分県</option>
+																<option value="宮崎県">宮崎県</option>
+																<option value="鹿児島県">鹿児島県</option>
+																<option value="沖縄県">沖縄県</option>
+															</select></span
+														><span class="mail-after-attachment"></span>
+														<div class="mail-description"></div>
+													</div>
+													<div class="mail-field" id="FieldMessageAddress2" data-type="text">
+														<label class="mail-before-attachment" for="MailMessageAddress2">市区町村</label><span class="mail-input"> <input id="MailMessageAddress2" name="data[MailMessage][address_2]" maxlength="200" type="text" data-size="short" /></span><span class="mail-after-attachment"></span>
+														<div class="mail-description"></div>
+													</div>
+													<div class="mail-field" id="FieldMessageAddress3" data-type="text">
+														<label class="mail-before-attachment" for="MailMessageAddress3">番地</label><span class="mail-input"> <input id="MailMessageAddress3" name="data[MailMessage][address_3]" maxlength="200" type="text" /></span><span class="mail-after-attachment"></span>
+														<div class="mail-description"></div>
+													</div>
+												</div>
+											</fieldset>
+										</div>
+										<!-- ⚠️ グループ化していない場合でも チェックボックスでは fieldset/legend の構造 -->
+										<div class="cc-form-fieldset" id="GroupMessageCategory">
+											<fieldset>
+												<legend class="cc-form-fieldset-heading"><span>チェックボックス単体</span><span class="required">必須</span></legend>
+												<div class="cc-form-fieldset-body">
+													<div class="mail-field" id="FieldMessageCategory" data-type="checkbox">
+														<span class="mail-before-attachment">チェックボックス前見出し</span>
+														<input id="MailMessageCategory" type="hidden" name="data[MailMessage][category]" value="" />
+														<div class="mail-input-checkbox">
+															<label>
+																<input type="checkbox" name="data[MailMessage][category][]" value="項目1" id="MailMessageCategory項目1" />
+																<span>項目1</span>
+															</label>
+														</div>
+														<div class="mail-input-checkbox">
+															<label>
+																<input type="checkbox" name="data[MailMessage][category][]" value="項目2" id="MailMessageCategory項目2" />
+																<span>項目2</span>
+															</label>
+														</div>
+														<div class="mail-input-checkbox">
+															<label>
+																<input type="checkbox" name="data[MailMessage][category][]" value="項目3" id="MailMessageCategory項目3" />
+																<span>項目3</span>
+															</label>
+														</div>
+														<span class="mail-after-attachment">チェックボックス後見出し</span>
+														<div class="mail-description"></div>
+													</div>
+												</div>
+											</fieldset>
+										</div>
+										<div class="cc-form-fieldset" id="GroupMessageContents">
+											<fieldset>
+												<legend class="cc-form-fieldset-heading"><span>チェックボックス</span><span class="required">必須</span></legend>
+												<div class="cc-form-fieldset-body">
+													<div class="mail-field" id="FieldMessageContents" data-type="checkbox">
+														<span class="mail-before-attachment"></span>
+														<input id="MailMessageField4" type="hidden" name="data[MailMessage][contents]" value="" />
+														<div class="mail-input-checkbox">
+															<label>
+																<input id="" type="checkbox" name="data[MailMessage][contents][]" value="生麦生米生卵" />
+																<span>生麦生米生卵</span>
+															</label>
+														</div>
+														<div class="mail-input-checkbox">
+															<label>
+																<input id="" type="checkbox" name="data[MailMessage][contents][]" value="赤パジャマ黄パジャマ茶パジャマ" />
+																<span>赤パジャマ黄パジャマ茶パジャマ</span>
+															</label>
+														</div>
+														<div class="mail-input-checkbox">
+															<label>
+																<input id="" type="checkbox" name="data[MailMessage][contents][]" value="青巻紙赤巻紙黄巻紙" />
+																<span>青巻紙赤巻紙黄巻紙</span>
+															</label>
+														</div>
+														<div class="mail-input-checkbox">
+															<label>
+																<input id="" type="checkbox" name="data[MailMessage][contents][]" value="隣の客はよく柿食う客だ" />
+																<span>隣の客はよく柿食う客だ</span>
+															</label>
+														</div>
+														<div class="mail-input-checkbox">
+															<label>
+																<input id="" type="checkbox" name="data[MailMessage][contents][]" value="かえるぴょこぴょこ3ぴょこぴょこ あわせてぴょこぴょこ6ぴょこぴょこ" />
+																<span>かえるぴょこぴょこ3ぴょこぴょこ あわせてぴょこぴょこ6ぴょこぴょこ</span>
+															</label>
+														</div>
+														<div class="mail-input-checkbox">
+															<label>
+																<input id="" type="checkbox" name="data[MailMessage][contents][]" value="東京特許許可局許可局長" />
+																<span>東京特許許可局許可局長</span>
+															</label>
+														</div>
+														<div class="mail-input-checkbox">
+															<label>
+																<input id="" type="checkbox" name="data[MailMessage][contents][]" value="その他" />
+																<span>その他</span>
+															</label>
+														</div>
+														<span class="mail-after-attachment"></span>
+													</div>
+													<div class="mail-field" id="FieldMessageContentsOther" data-type="text">
+														<label class="mail-before-attachment" for="MailMessageContentsOther">その他</label><span class="mail-input"> <input id="MailMessageContentsOther" name="data[MailMessage][contents_other]" maxlength="255" type="text" /></span><span class="mail-after-attachment"></span>
+														<div class="mail-description">その他を選択された場合は内容をご入力ください。</div>
+													</div>
+												</div>
+											</fieldset>
+										</div>
+										<div class="cc-form-fieldset" id="GroupMessageTel">
+											<div>
+												<div class="cc-form-fieldset-heading">
+													<label for="MailMessageTel">電話番号</label>
+												</div>
+												<div class="cc-form-fieldset-body">
+													<div class="mail-field" id="FieldMessageTel" data-type="text">
+														<span class="mail-before-attachment"></span><span class="mail-input"><input id="MailMessageTel" name="data[MailMessage][tel]" maxlength="13" type="tel" data-size="short" /></span><span class="mail-after-attachment"></span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="cc-form-fieldset" id="GroupMessageEmail1">
+											<div>
+												<div class="cc-form-fieldset-heading"><label for="MailMessageEmail1">メールアドレス</label><span class="required">必須</span></div>
+												<div class="cc-form-fieldset-body">
+													<div class="mail-field" id="FieldMessageEmail1" data-type="text">
+														<span class="mail-before-attachment"></span><span class="mail-input"> <input id="MailMessageEmail1" name="data[MailMessage][email_1]" maxlength="255" type="email" /></span><span class="mail-after-attachment"></span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="cc-form-fieldset" id="GroupMessageBirth">
+											<div>
+												<div class="cc-form-fieldset-heading"><label for="MailMessageBirth">生まれ年</label><span class="required">必須</span></div>
+												<div class="cc-form-fieldset-body">
+													<div class="mail-field" id="FieldMessageBirth" data-type="select">
+														<span class="mail-before-attachment"></span
+														><span class="mail-input">
+															<select id="MailMessageBirth" name="data[MailMessage][birth]">
+																<option value="">選択してください</option>
+																<option value="1">1923年</option>
+																<option value="2">1924年</option>
+																<option value="3">1925年</option>
+																<option value="4">1926年</option>
+																<option value="5">1927年</option>
+																<option value="6">1928年</option>
+																<option value="7">1929年</option>
+																<option value="8">1930年</option>
+																<option value="9">1931年</option>
+																<option value="10">1932年</option>
+																<option value="11">1933年</option>
+																<option value="12">1934年</option>
+																<option value="13">1935年</option>
+																<option value="14">1936年</option>
+																<option value="15">1937年</option>
+																<option value="16">1938年</option>
+																<option value="17">1939年</option>
+																<option value="18">1940年</option>
+																<option value="19">1941年</option>
+																<option value="20">1942年</option>
+																<option value="21">1943年</option>
+																<option value="22">1944年</option>
+																<option value="23">1945年</option>
+																<option value="24">1946年</option>
+																<option value="25">1947年</option>
+																<option value="26">1948年</option>
+																<option value="27">1949年</option>
+																<option value="28">1950年</option>
+																<option value="29">1951年</option>
+																<option value="30">1952年</option>
+																<option value="31">1953年</option>
+																<option value="32">1954年</option>
+																<option value="33">1955年</option>
+																<option value="34">1956年</option>
+																<option value="35">1957年</option>
+																<option value="36">1958年</option>
+																<option value="37">1959年</option>
+																<option value="38">1960年</option>
+																<option value="39">1961年</option>
+																<option value="40">1962年</option>
+																<option value="41">1963年</option>
+																<option value="42">1964年</option>
+																<option value="43">1965年</option>
+																<option value="44">1966年</option>
+																<option value="45">1967年</option>
+																<option value="46">1968年</option>
+																<option value="47">1969年</option>
+																<option value="48">1970年</option>
+																<option value="49">1971年</option>
+																<option value="50">1972年</option>
+																<option value="51">1973年</option>
+																<option value="52">1974年</option>
+																<option value="53">1975年</option>
+																<option value="54">1976年</option>
+																<option value="55">1977年</option>
+																<option value="56">1978年</option>
+																<option value="57">1979年</option>
+																<option value="58">1980年</option>
+																<option value="59">1981年</option>
+																<option value="60">1982年</option>
+																<option value="61">1983年</option>
+																<option value="62">1984年</option>
+																<option value="63">1985年</option>
+																<option value="64">1986年</option>
+																<option value="65">1987年</option>
+																<option value="66">1988年</option>
+																<option value="67">1989年</option>
+																<option value="68">1990年</option>
+																<option value="69">1991年</option>
+																<option value="70">1992年</option>
+																<option value="71">1993年</option>
+																<option value="72">1994年</option>
+																<option value="73">1995年</option>
+																<option value="74">1996年</option>
+																<option value="75">1997年</option>
+																<option value="76">1998年</option>
+																<option value="77">1999年</option>
+																<option value="78">2000年</option>
+																<option value="79">2001年</option>
+																<option value="80">2002年</option>
+																<option value="81">2003年</option>
+																<option value="82">2004年</option>
+																<option value="83">2005年</option>
+																<option value="84">2006年</option>
+																<option value="85">2007年</option>
+																<option value="86">2008年</option>
+																<option value="87">2009年</option>
+																<option value="88">2010年</option>
+																<option value="89">2011年</option>
+																<option value="90">2012年</option>
+																<option value="91">2013年</option>
+																<option value="92">2014年</option>
+																<option value="93">2015年</option>
+																<option value="94">2016年</option>
+																<option value="95">2017年</option>
+															</select></span
+														><span class="mail-after-attachment"></span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="cc-form-fieldset" id="GroupMessageSex">
+											<fieldset>
+												<legend class="cc-form-fieldset-heading"><span>性別</span><span class="optional">任意</span></legend>
+												<div class="cc-form-fieldset-body">
+													<div class="mail-field" id="FieldMessageSex" data-type="radio">
+														<span class="mail-before-attachment"></span>
+														<span class="mail-input-radio">
+															<label>
+																<input id="MailMessageSex1" type="radio" name="data[MailMessage][sex]" value="1" />
+																<span>男性</span>
+															</label>
+														</span>
+														<span class="mail-input-radio">
+															<label>
+																<input id="MailMessageSex2" type="radio" name="data[MailMessage][sex]" value="2" />
+																<span>女性</span>
+															</label>
+														</span>
+														<span class="mail-after-attachment"></span>
+													</div>
+												</div>
+											</fieldset>
+										</div>
+										<div class="cc-form-fieldset" id="GroupMessageMessage">
+											<div>
+												<div class="cc-form-fieldset-heading"><label for="MailMessageMessage">テキストエリア</label><span class="optional">任意</span></div>
+												<div class="cc-form-fieldset-body">
+													<div class="mail-field" id="FieldMessageMessage" data-type="textarea">
+														<span class="mail-before-attachment"></span>
+														<!-- CMS要件: サイズ指定がないときは cols属性を出力しない--><span class="mail-input">
+															<textarea id="MailMessageMessage" name="data[MailMessage][message]"></textarea></span
+														><span class="mail-after-attachment"></span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="cc-form-fieldset" id="GroupMessageMessage2">
+											<div>
+												<div class="cc-form-fieldset-heading"><label for="MailMessageMessage2">テキストエリア</label><span class="optional">任意</span></div>
+												<div class="cc-form-fieldset-body">
+													<div class="mail-field" id="FieldMessageMessage2" data-type="textarea">
+														<span class="mail-before-attachment">前見出し</span
+														><span class="mail-input">
+															<textarea id="MailMessageMessage2" name="data[MailMessage][message2]"></textarea></span
+														><span class="mail-after-attachment">後見出し</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="cc-form-fieldset" id="GroupMessageFile">
+											<div>
+												<div class="cc-form-fieldset-heading"><label for="MailMessageFile">ファイル添付</label><span class="optional">任意</span></div>
+												<div class="cc-form-fieldset-body">
+													<div class="mail-field" id="FieldMessageFile" data-type="file">
+														<span class="mail-before-attachment">前見出し</span>
+														<span class="mail-input-file">
+															<label>
+																<div class="mail-input-file-input">
+																	<span>選択されていません。</span>
+																	<input id="MailMessageFile" name="data[MailMessage][File]" type="file" />
+																</div>
+																<div class="mail-input-file-btn"><span>ファイルを選択</span></div>
+															</label>
+														</span>
+														<span class="mail-after-attachment">後見出し</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="cc-form-agreement">
+										<p>送信前に<a href="__PATH_TO__">個人情報保護方針</a>をご確認ください。</p>
+									</div>
+									<div class="cc-form-submit">
+										<div class="cc-form-submit-btn"><input type="submit" value="送信内容を確認"></div>
+									</div>
+									<input id="TokenFields__TOKEN" type="hidden" name="data[_Token][fields]" value="__TOKEN__" />
+									<input id="TokenUnlocked__TOKEN" type="hidden" name="data[_Token][unlocked]" value="__TOKEN__" />
+								</form>
+							</div>
+						</div>
+					</div>
+				</main>
+			</div>
+			<div class="c-page-home__nav-sitemap">
+				<nav class="c-nav-sitemap" aria-label="ページ一覧">
+					<div class="c-nav-sitemap__body">
+						<ul data-sitemap-level="1">
+							<li data-sitemap-level="1">
+								<a href="__URL__">__Lv.1_カテゴリインデックス__</a>
+								<ul data-sitemap-level="2">
+									<li data-sitemap-level="2">
+										<a href="__URL__">__Lv.2_サブカテゴリインデックス__</a>
+										<ul data-sitemap-level="3">
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li data-sitemap-level="1"><a href="__URL__">__Lv.1_ページタイトル__</a></li>
+							<li data-sitemap-level="1"><a href="__URL__">__Lv.1_ページタイトル__</a></li>
+							<li data-sitemap-level="1"><a href="__URL__">__Lv.1_ページタイトル__</a></li>
+							<li data-sitemap-level="1">
+								<a href="__URL__">__Lv.1_カテゴリインデックス__</a>
+								<ul data-sitemap-level="2">
+									<li data-sitemap-level="2"><a href="__URL__">__Lv.2_ページタイトル__</a></li>
+									<li data-sitemap-level="2"><a href="__URL__">__Lv.2_ページタイトル__</a></li>
+									<li data-sitemap-level="2"><a href="__URL__">__Lv.2_ページタイトル__</a></li>
+									<li data-sitemap-level="2">
+										<a href="__URL__">__Lv.2_サブカテゴリインデックス__</a>
+										<ul data-sitemap-level="3">
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li data-sitemap-level="1"><a href="__URL__">__Lv.1_ページタイトル__</a></li>
+							<li data-sitemap-level="1"><a href="__URL__">__Lv.1_ページタイトル__</a></li>
+							<li data-sitemap-level="1">
+								<a href="__URL__">__Lv.1_カテゴリインデックス__</a>
+								<ul data-sitemap-level="2">
+									<li data-sitemap-level="2"><a href="__URL__">__Lv.2_ページタイトル__</a></li>
+									<li data-sitemap-level="2">
+										<a href="__URL__">__Lv.2_サブカテゴリインデックス__</a>
+										<ul data-sitemap-level="3">
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+										</ul>
+									</li>
+									<li data-sitemap-level="2"><a href="__URL__">__Lv.2_ページタイトル__</a></li>
+									<li data-sitemap-level="2"><a href="__URL__">__Lv.2_ページタイトル__</a></li>
+								</ul>
+							</li>
+							<li data-sitemap-level="1">
+								<a href="__URL__">__Lv.1_カテゴリインデックス__</a>
+								<ul data-sitemap-level="2">
+									<li data-sitemap-level="2"><a href="__URL__">__Lv.2_ページタイトル__</a></li>
+									<li data-sitemap-level="2"><a href="__URL__">__Lv.2_ページタイトル__</a></li>
+									<li data-sitemap-level="2"><a href="__URL__">__Lv.2_ページタイトル__</a></li>
+									<li data-sitemap-level="2">
+										<a href="__URL__">__Lv.2_サブカテゴリインデックス__</a>
+										<ul data-sitemap-level="3">
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li data-sitemap-level="1"><a href="__URL__">__Lv.1_ページタイトル__</a></li>
+							<li data-sitemap-level="1">
+								<a href="__URL__">__Lv.1_カテゴリインデックス__</a>
+								<ul data-sitemap-level="2">
+									<li data-sitemap-level="2"><a href="__URL__">__Lv.2_ページタイトル__</a></li>
+									<li data-sitemap-level="2">
+										<a href="__URL__">__Lv.2_サブカテゴリインデックス__</a>
+										<ul data-sitemap-level="3">
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+										</ul>
+									</li>
+									<li data-sitemap-level="2"><a href="__URL__">__Lv.2_ページタイトル__</a></li>
+									<li data-sitemap-level="2"><a href="__URL__">__Lv.2_ページタイトル__</a></li>
+								</ul>
+							</li>
+							<li data-sitemap-level="1">
+								<a href="__URL__">__Lv.1_カテゴリインデックス__</a>
+								<ul data-sitemap-level="2">
+									<li data-sitemap-level="2"><a href="__URL__">__Lv.2_ページタイトル__</a></li>
+									<li data-sitemap-level="2"><a href="__URL__">__Lv.2_ページタイトル__</a></li>
+									<li data-sitemap-level="2"><a href="__URL__">__Lv.2_ページタイトル__</a></li>
+									<li data-sitemap-level="2">
+										<a href="__URL__">__Lv.2_サブカテゴリインデックス__</a>
+										<ul data-sitemap-level="3">
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+			<div class="c-page-home__footer">
+				<footer class="c-footer">
+					<div class="c-footer__body">
+						<div class="c-footer__links">
+							<ul>
+								<li><a href="__URL__">__個人情報保護方針__</a></li>
+								<li><a href="__URL__">__サイトポリシー__</a></li>
+								<li><a href="__URL__">__お問い合わせ__</a></li>
+							</ul>
+						</div>
+						<small class="c-footer__copyright">©2021 THE SITE NAME Co.,Ltd.</small>
+					</div>
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>

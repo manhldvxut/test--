@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>__ページタイトル__ | __サイトタイトル__</title>
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="description" content="__ディスクリプション__" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="__サイトタイトル__" />
+		<meta property="og:site_name" content="__サイトタイトル__" />
+		<meta property="og:description" content="__ディスクリプション__" />
+		<meta property="og:url" content="__SNSからリンクさせるURL__" />
+		<meta property="og:image" content="__OGP用画像__" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<link rel="shortcut icon" href="/favicon.png" />
+		<link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700&amp;subset=japanese" rel="stylesheet" />
+		<link rel="stylesheet" href="/css/style.css" />
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/script.js" defer="defer"></script>
+	</head>
+	<body class="c-page-sub">
+		<div class="c-page-sub__base">
+			<div class="c-page-sub__header">
+				<header class="c-header">
+					<div class="c-header__body">
+						<div class="c-header__title">
+							<div class="c-header__site-name">
+								<div>
+									<a href="__URL__"><span><img src="/img/logo.png" width="130" height="44" alt=""></span></a>
+								</div>
+							</div>
+							<p class="c-header__description">__Lorem ipsum dolor sit amet, consectetur adipisicing elit.__</p>
+						</div>
+						<div class="c-header__info">
+							<ul class="c-header__links">
+								<li>
+									<a href="__URL__"><span>__会社概要__</span></a>
+								</li>
+								<li>
+									<a href="__URL__"><span>__新着情報__</span></a>
+								</li>
+								<li>
+									<a href="__URL__"><span>__サイトマップ__</span></a>
+								</li>
+							</ul>
+							<div class="c-header__tel">
+								<a href="tel:0000000000"><span>00-0000-0000</span></a>
+							</div>
+						</div>
+					</div>
+				</header>
+			</div>
+			<div class="c-page-sub__nav-global">
+				<nav class="c-nav-global" aria-label="メインメニュー">
+					<div class="c-nav-global__body">
+						<ul class="c-nav-global__list">
+							<li class="c-nav-global__item">
+								<a href="__URL__"><span>__コンテンツ__</span></a>
+							</li>
+							<li class="c-nav-global__item">
+								<a href="__URL__"><span>__コンテンツ__</span></a>
+							</li>
+							<li class="c-nav-global__item">
+								<a href="__URL__"><span>__コンテンツ__</span></a>
+							</li>
+							<li class="c-nav-global__item">
+								<a href="__URL__"><span>__コンテンツ__</span></a>
+							</li>
+							<li class="c-nav-global__item">
+								<a href="__URL__"><span>__コンテンツ__</span></a>
+							</li>
+							<li class="c-nav-global__item">
+								<a href="__URL__"><span>__コンテンツ__</span></a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+			<div class="c-page-sub__main">
+				<main class="c-page-sub__content">
+					<div>
+						<div class="c-page-sub__title-page">
+							<div class="c-title-page">
+								<h1>__ページタイトル__</h1>
+							</div>
+						</div>
+						<div class="c-page-sub__nav-breadcrumb">
+							<div class="c-nav-breadcrumb">
+								<ol itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList">
+									<li class="c-nav-breadcrumb__item" itemscope="itemscope" itemprop="itemListElement" itemtype="https://schema.org/ListItem" data-breadcrumb="home">
+										<a href="/" itemid="/" itemscope="itemscope" itemprop="item" itemtype="https://schema.org/WebPage"><span itemporp="name">Home</span></a> <meta itemprop="position" content="1" /><span class="c-nav-breadcrumb__separetor"></span>
+									</li>
+									<li class="c-nav-breadcrumb__item" itemscope="itemscope" itemprop="itemListElement" itemtype="https://schema.org/ListItem">
+										<a href="/first/" itemid="/first/" itemscope="itemscope" itemprop="item" itemtype="https://schema.org/WebPage"><span itemporp="name">Parent</span></a> <meta itemprop="position" content="2" /><span class="c-nav-breadcrumb__separetor"></span>
+									</li>
+									<li class="c-nav-breadcrumb__item" itemscope="itemscope" itemprop="itemListElement" itemtype="https://schema.org/ListItem" data-breadcrumb="current">
+										<a href="/first/about" itemid="/first/about" itemscope="itemscope" itemprop="item" itemtype="https://schema.org/WebPage"><span itemporp="name">Current</span></a>
+										<meta itemprop="position" content="3" />
+									</li>
+								</ol>
+							</div>
+						</div>
+						<div class="c-content-main">
+							<div class="cc-form" data-form="confirm">
+								<div class="cc-form-description">
+									<p>以下の内容を送信します。</p>
+								</div>
+								<form id="MailMessageIndexForm" action="__PATH_TO__" novalidate="novalidate" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+									<input type="hidden" name="_method" value="POST" />
+									<input id="Token__TOKEN__" type="hidden" name="data[_Token][key]" value="__TOKEN__" />
+									<input id="MailMessageMode" type="hidden" name="data[MailMessage][mode]" />
+									<div class="cc-form-field-list">
+										<div class="cc-form-fieldset">
+											<div class="cc-form-fieldset-heading"><span>フィールドグループ名</span><span class="required">必須</span></div>
+											<div class="cc-form-fieldset-body">
+												<div class="mail-field" data-type="text"><span class="mail-before-attachment">前見出し</span><span class="mail-input">__入力内容__</span><span class="mail-after-attachment">後見出し</span></div>
+												<div class="mail-field" data-type="text"><span class="mail-before-attachment"></span><span class="mail-input">__入力内容__</span><span class="mail-after-attachment">後見出し</span></div>
+											</div>
+										</div>
+										<div class="cc-form-fieldset">
+											<div>
+												<div class="cc-form-fieldset-heading"><span>単体フィールド名</span><span class="required">必須</span></div>
+												<div class="cc-form-fieldset-body">
+													<div class="mail-field" data-type="text"><span class="mail-before-attachment">前見出し</span><span class="mail-input">__入力内容__</span><span class="mail-after-attachment">後見出し</span></div>
+												</div>
+											</div>
+										</div>
+										<div class="cc-form-fieldset">
+											<div>
+												<div class="cc-form-fieldset-heading"><span>氏名</span><span class="required">必須</span></div>
+												<div class="cc-form-fieldset-body">
+													<div class="mail-field" data-type="text"><span class="mail-before-attachment">姓</span><span class="mail-input">__入力内容__</span><span class="mail-after-attachment"></span></div>
+													<div class="mail-field" data-type="text"><span class="mail-before-attachment">名</span><span class="mail-input">__入力内容__</span><span class="mail-after-attachment"></span></div>
+												</div>
+											</div>
+										</div>
+										<div class="cc-form-fieldset">
+											<div>
+												<div class="cc-form-fieldset-heading"><span>フリガナ</span><span class="optional">任意</span></div>
+												<div class="cc-form-fieldset-body">
+													<div class="mail-field" data-type="text"><span class="mail-before-attachment">セイ</span><span class="mail-input">__入力内容__</span><span class="mail-after-attachment"></span></div>
+													<div class="mail-field" data-type="text"><span class="mail-before-attachment">メイ</span><span class="mail-input">__入力内容__</span><span class="mail-after-attachment"></span></div>
+												</div>
+											</div>
+										</div>
+										<div class="cc-form-fieldset">
+											<div>
+												<div class="cc-form-fieldset-heading"><span>住所</span><span class="optional">任意</span></div>
+												<div class="cc-form-fieldset-body">
+													<div class="mail-field" data-type="text"><span class="mail-before-attachment">〒</span><span class="mail-input">__入力内容__</span><span class="mail-after-attachment"></span></div>
+													<div class="mail-field" data-type="select"><span class="mail-before-attachment">都道府県</span><span class="mail-input">__入力内容__</span><span class="mail-after-attachment"></span></div>
+													<div class="mail-field" data-type="text"><span class="mail-before-attachment">市区町村</span><span class="mail-input">__入力内容__</span><span class="mail-after-attachment"></span></div>
+													<div class="mail-field" data-type="text"><span class="mail-before-attachment">番地</span><span class="mail-input">__入力内容__</span><span class="mail-after-attachment"></span></div>
+												</div>
+											</div>
+										</div>
+										<div class="cc-form-fieldset">
+											<div>
+												<div class="cc-form-fieldset-heading"><span>チェックボックス単体</span><span class="required">必須</span></div>
+												<div class="cc-form-fieldset-body">
+													<div class="mail-field" data-type="checkbox">
+														<span class="mail-before-attachment">チェックボックス前見出し</span>
+														<div>
+															<ul>
+																<li>__選択項目1__</li>
+																<li>__選択項目2__</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="cc-form-fieldset">
+											<div>
+												<div class="cc-form-fieldset-heading"><span>チェックボックス</span><span class="required">必須</span></div>
+												<div class="cc-form-fieldset-body">
+													<div class="mail-field" data-type="checkbox">
+														<div>
+															<ul>
+																<li>__選択項目1__</li>
+																<li>__選択項目2__</li>
+															</ul>
+														</div>
+													</div>
+													<div class="mail-field" data-type="text"><span class="mail-before-attachment">その他</span><span class="mail-input">__入力内容__</span><span class="mail-after-attachment"></span></div>
+												</div>
+											</div>
+										</div>
+										<div class="cc-form-fieldset">
+											<div>
+												<div class="cc-form-fieldset-heading"><span>電話番号</span></div>
+												<div class="cc-form-fieldset-body">
+													<div class="mail-field" data-type="text"><span class="mail-before-attachment"></span><span class="mail-input">__入力内容__</span><span class="mail-after-attachment"></span></div>
+												</div>
+											</div>
+										</div>
+										<div class="cc-form-fieldset">
+											<div>
+												<div class="cc-form-fieldset-heading"><span>メールアドレス</span><span class="required">必須</span></div>
+												<div class="cc-form-fieldset-body">
+													<div class="mail-field" data-type="text"><span class="mail-before-attachment"></span><span class="mail-input">__入力内容__</span><span class="mail-after-attachment"></span></div>
+												</div>
+											</div>
+										</div>
+										<div class="cc-form-fieldset">
+											<div>
+												<div class="cc-form-fieldset-heading"><span>生まれ年</span><span class="required">必須</span></div>
+												<div class="cc-form-fieldset-body">
+													<div class="mail-field" data-type="select"><span class="mail-before-attachment"></span><span class="mail-input">__入力内容__</span><span class="mail-after-attachment"></span></div>
+												</div>
+											</div>
+										</div>
+										<div class="cc-form-fieldset">
+											<div>
+												<div class="cc-form-fieldset-heading"><span>性別</span><span class="optional">任意</span></div>
+												<div class="cc-form-fieldset-body">
+													<div class="mail-field" data-type="radio">
+														<span class="mail-before-attachment"></span>
+														<div class="mail-radio"><span class="mail-input">__選択項目__</span></div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="cc-form-fieldset">
+											<div>
+												<div class="cc-form-fieldset-heading"><span>テキストエリア</span><span class="optional">任意</span></div>
+												<div class="cc-form-fieldset-attention">
+													<div class="mail-attention">注意書き</div>
+												</div>
+												<div class="cc-form-fieldset-body">
+													<div class="mail-field" data-type="textarea">
+														<span class="mail-before-attachment"></span>
+														<p class="mail-input">__入力内容__</p>
+														<span class="mail-after-attachment"></span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="cc-form-fieldset">
+											<div>
+												<div class="cc-form-fieldset-heading"><span>テキストエリア</span><span class="optional">任意</span></div>
+												<div class="cc-form-fieldset-body">
+													<div class="mail-field" data-type="textarea">
+														<span class="mail-before-attachment">前見出し</span>
+														<p class="mail-input">__入力内容__</p>
+														<span class="mail-after-attachment">後見出し</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="cc-form-fieldset">
+											<div>
+												<div class="cc-form-fieldset-heading"><span>ファイル添付</span><span class="optional">任意</span></div>
+												<div class="cc-form-fieldset-body">
+													<div class="mail-field" data-type="file"><span class="mail-before-attachment">前見出し</span><span class="mail-input">__ファイル名__</span><span class="mail-after-attachment">後見出し</span></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="cc-form-submit">
+										<div class="cc-form-submit-back"><input type="button" value="修正"></div>
+										<div class="cc-form-submit-btn"><input type="submit" value="送信する"></div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</main>
+			</div>
+			<div class="c-page-home__nav-sitemap">
+				<nav class="c-nav-sitemap" aria-label="ページ一覧">
+					<div class="c-nav-sitemap__body">
+						<ul data-sitemap-level="1">
+							<li data-sitemap-level="1">
+								<a href="__URL__">__Lv.1_カテゴリインデックス__</a>
+								<ul data-sitemap-level="2">
+									<li data-sitemap-level="2">
+										<a href="__URL__">__Lv.2_サブカテゴリインデックス__</a>
+										<ul data-sitemap-level="3">
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li data-sitemap-level="1"><a href="__URL__">__Lv.1_ページタイトル__</a></li>
+							<li data-sitemap-level="1"><a href="__URL__">__Lv.1_ページタイトル__</a></li>
+							<li data-sitemap-level="1"><a href="__URL__">__Lv.1_ページタイトル__</a></li>
+							<li data-sitemap-level="1">
+								<a href="__URL__">__Lv.1_カテゴリインデックス__</a>
+								<ul data-sitemap-level="2">
+									<li data-sitemap-level="2"><a href="__URL__">__Lv.2_ページタイトル__</a></li>
+									<li data-sitemap-level="2"><a href="__URL__">__Lv.2_ページタイトル__</a></li>
+									<li data-sitemap-level="2"><a href="__URL__">__Lv.2_ページタイトル__</a></li>
+									<li data-sitemap-level="2">
+										<a href="__URL__">__Lv.2_サブカテゴリインデックス__</a>
+										<ul data-sitemap-level="3">
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li data-sitemap-level="1"><a href="__URL__">__Lv.1_ページタイトル__</a></li>
+							<li data-sitemap-level="1"><a href="__URL__">__Lv.1_ページタイトル__</a></li>
+							<li data-sitemap-level="1">
+								<a href="__URL__">__Lv.1_カテゴリインデックス__</a>
+								<ul data-sitemap-level="2">
+									<li data-sitemap-level="2"><a href="__URL__">__Lv.2_ページタイトル__</a></li>
+									<li data-sitemap-level="2">
+										<a href="__URL__">__Lv.2_サブカテゴリインデックス__</a>
+										<ul data-sitemap-level="3">
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+										</ul>
+									</li>
+									<li data-sitemap-level="2"><a href="__URL__">__Lv.2_ページタイトル__</a></li>
+									<li data-sitemap-level="2"><a href="__URL__">__Lv.2_ページタイトル__</a></li>
+								</ul>
+							</li>
+							<li data-sitemap-level="1">
+								<a href="__URL__">__Lv.1_カテゴリインデックス__</a>
+								<ul data-sitemap-level="2">
+									<li data-sitemap-level="2"><a href="__URL__">__Lv.2_ページタイトル__</a></li>
+									<li data-sitemap-level="2"><a href="__URL__">__Lv.2_ページタイトル__</a></li>
+									<li data-sitemap-level="2"><a href="__URL__">__Lv.2_ページタイトル__</a></li>
+									<li data-sitemap-level="2">
+										<a href="__URL__">__Lv.2_サブカテゴリインデックス__</a>
+										<ul data-sitemap-level="3">
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li data-sitemap-level="1"><a href="__URL__">__Lv.1_ページタイトル__</a></li>
+							<li data-sitemap-level="1">
+								<a href="__URL__">__Lv.1_カテゴリインデックス__</a>
+								<ul data-sitemap-level="2">
+									<li data-sitemap-level="2"><a href="__URL__">__Lv.2_ページタイトル__</a></li>
+									<li data-sitemap-level="2">
+										<a href="__URL__">__Lv.2_サブカテゴリインデックス__</a>
+										<ul data-sitemap-level="3">
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+										</ul>
+									</li>
+									<li data-sitemap-level="2"><a href="__URL__">__Lv.2_ページタイトル__</a></li>
+									<li data-sitemap-level="2"><a href="__URL__">__Lv.2_ページタイトル__</a></li>
+								</ul>
+							</li>
+							<li data-sitemap-level="1">
+								<a href="__URL__">__Lv.1_カテゴリインデックス__</a>
+								<ul data-sitemap-level="2">
+									<li data-sitemap-level="2"><a href="__URL__">__Lv.2_ページタイトル__</a></li>
+									<li data-sitemap-level="2"><a href="__URL__">__Lv.2_ページタイトル__</a></li>
+									<li data-sitemap-level="2"><a href="__URL__">__Lv.2_ページタイトル__</a></li>
+									<li data-sitemap-level="2">
+										<a href="__URL__">__Lv.2_サブカテゴリインデックス__</a>
+										<ul data-sitemap-level="3">
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+											<li data-sitemap-level="3"><a href="__URL__">__Lv.3_ページタイトル__</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+			<div class="c-page-home__footer">
+				<footer class="c-footer">
+					<div class="c-footer__body">
+						<div class="c-footer__links">
+							<ul>
+								<li><a href="__URL__">__個人情報保護方針__</a></li>
+								<li><a href="__URL__">__サイトポリシー__</a></li>
+								<li><a href="__URL__">__お問い合わせ__</a></li>
+							</ul>
+						</div>
+						<small class="c-footer__copyright">©2021 THE SITE NAME Co.,Ltd.</small>
+					</div>
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+// # style.scss
+// 使用する際はscssファイルの「// 未使用」のコメントを外してください
+// ========== ========== ========== ========== ==========
+@charset 'utf-8';
+
+@import 'theme/color';
+@import 'theme/dimension';
+@import 'theme/font';
+@import 'base/reset';
+@import 'base/root';
+@import 'base/hepper';
+@import 'general/all';
+@import 'general/body';
+@import 'general/button';
+@import 'component/page-home';
+@import 'component/page-sub';
+@import 'component/header';
+@import 'component/footer';
+@import 'component/nav-global';
+@import 'component/nav-local'; // 未使用
+@import 'component/nav-sitemap'; // 未使用
+@import 'component/nav-breadcrumb';
+@import 'component/list-banner'; // 未使用
+@import 'component/list-category'; // 未使用
+@import 'component/list-tag'; // 未使用
+@import 'component/title-page';
+@import 'component/hero';
+@import 'component/pagination'; // 未使用
+@import 'component/floating'; // 未使用
+@import 'component/pagetop';
+@import 'component/content-index';
+@import 'component/content-main';
+@import 'theme/default'; // layout all page
+@import 'theme/layout'; // layout all page
+
+// @import 'component/card'; // 未使用

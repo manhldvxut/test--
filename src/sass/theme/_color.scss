@@ -1,0 +1,71 @@
+// # 全般
+// ========== ========== ========== ========== ==========
+// サイトで最も明るい色
+$lightest-color: #fff;
+
+// サイトで最も暗い色
+$darkest-color: #333;
+
+// メインカラー
+$primary-color: #4ec11b;
+$primary-color-lighter: #acacac;
+$primary-color-darker: #37970e;
+
+// サブカラー
+$secondary-color: #7e7e7e;
+$secondary-color-lighter: #baa98f;
+$secondary-color-lighter2: #dad3c9;
+$secondary-color-lighter3: #f6eee5;
+$secondary-color-darker: #333333;
+$list-nav-color: $secondary-color-darker;
+
+$red-color: #ec7289;
+
+// lightenやdarkenを使う際は、下記のエラー無効も合わせて設定してください
+// stylelint-disable scss/no-global-function-names
+$secondary-color-lighter4: lighten($secondary-color, 30%);
+$secondary-color-lighter5: lighten($secondary-color, 50%);
+$secondary-color-darker2: darken($secondary-color, 50%);
+// stylelint-enable scss/no-global-function-names
+
+// アクセントカラー
+$accent-color: #f07100;
+
+// グレイカラー
+$gray-color: #fafafa;
+$gray-color02: #efefef;
+$gray-color03: #999;
+$gray-color04: #333;
+
+// 警告カラー
+$warning-color: #ad1313;
+
+// # タイポグラフィ
+// ========== ========== ========== ========== ==========
+// 標準のテキストの色
+$font-primary-color: $darkest-color;
+
+// 選択時の背景色（ブラウザデフォルト: #B3D4FF）
+$selection-background-color: $primary-color-lighter;
+
+// # ボックスモデル
+// ========== ========== ========== ========== ==========
+// 標準の境界線の色
+$border-primary-color: #d2cdcd;
+
+$boder-line-gray: #e6e6e6;
+
+$arrow-down-line : #ec6d82;
+
+// # フォーム
+// ========== ========== ========== ========== ==========
+// フォーム要素フォーカス時のグローカラー
+$btn-glow-color: #0570c7;
+
+// プレースホルダーカラー
+$placeholder-color: $gray-color03;
+
+
+// arrow slider
+
+$btn-arrow: #7e7e7e;
